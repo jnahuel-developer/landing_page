@@ -30,7 +30,7 @@ class HeroSection extends StatelessWidget {
             ),
             SizedBox(height: 15),
             Text(
-              "Flutter • Android • Web • Hardware • IoT • Investigación",
+              "Software • Hardware • Android • Web • IoT • Investigación • Optimización de procesos",
               style: TextStyle(fontSize: 18, color: Colors.white70),
               textAlign: TextAlign.center,
             ),

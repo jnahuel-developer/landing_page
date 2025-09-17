@@ -15,7 +15,12 @@ class AboutMeSection extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Text(
-            "Soy ingeniero electrónico con amplia experiencia en hardware, software y firmware. "
+            "Soy Ingeniero Electrónico con más de 6 años de experiencia entre la industria médica y la industria financiera."
+            "Me focalizo en las mejoras de producto, buscando aumentar la calidad con reducción de costos productivos."
+            "He desarrollado y puesto en comercialización el “Purity UV”, así como más de 10 proyectos internos."
+            "Reduje hasta 20% los costos productivos de electrónica, hasta un 30% el retrabajo por fallas comunes,"
+            "y hasta un 50% el tiempo de calibración y control de los equipos."
+            
             "Trabajo en desarrollo de aplicaciones móviles y web con Flutter, "
             "aplicaciones de escritorio en C/C++ con interfaces gráficas, "
             "bases de datos SQL, diseño de PCBs, integración IoT y redacción de informes técnicos.\n\n"

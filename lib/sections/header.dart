@@ -12,7 +12,7 @@ class HeaderSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
-            "J. Nahuel - Desarrollador",
+            "Nahuel Martinez - Desarrollador",
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -21,6 +21,7 @@ class HeaderSection extends StatelessWidget {
           ),
           Row(
             children: [
+              _navButton("Logeuarse"),
               _navButton("Sobre mí"),
               _navButton("Servicios"),
               _navButton("Contacto"),
