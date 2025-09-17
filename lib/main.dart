@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/generated/l10n.dart';
+
 import 'sections/header.dart';
 import 'sections/hero.dart';
 import 'sections/about.dart';
@@ -9,8 +12,21 @@ void main() {
   runApp(const MyPortfolioApp());
 }
 
-class MyPortfolioApp extends StatelessWidget {
+class MyPortfolioApp extends StatefulWidget {
   const MyPortfolioApp({super.key});
+
+  @override
+  State<MyPortfolioApp> createState() => _MyPortfolioAppState();
+}
+
+class _MyPortfolioAppState extends State<MyPortfolioApp> {
+  Locale _locale = const Locale('en'); // Idioma por defecto
+
+  void setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +45,29 @@ class MyPortfolioApp extends StatelessWidget {
           titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
-      home: const PortfolioHomePage(),
+      locale: _locale,
+      supportedLocales: const [
+        Locale('en'),
+        Locale('es'),
+        Locale('it'),
+      ],
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      home: PortfolioHomePage(
+        onLocaleChange: setLocale,
+      ),
     );
   }
 }
 
 class PortfolioHomePage extends StatelessWidget {
-  const PortfolioHomePage({super.key});
+  final void Function(Locale) onLocaleChange;
+
+  const PortfolioHomePage({super.key, required this.onLocaleChange});
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +76,14 @@ class PortfolioHomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
-            HeaderSection(),
-            HeroSection(),
-            AboutMeSection(),
-            ServicesSection(),
-            ContactSection(),
+          children: [
+            HeaderSection(
+              onLocaleChange: onLocaleChange, // 🔹 Pasamos callback para cambiar idioma
+            ),
+            const HeroSection(),
+            const AboutMeSection(),
+            const ServicesSection(),
+            const ContactSection(),
           ],
         ),
       ),

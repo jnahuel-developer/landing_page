@@ -28,6 +28,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_localizations:
+    sdk: flutter
   flutter:
     sdk: flutter
 
@@ -58,6 +60,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/electronics_bg.jpg
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:
