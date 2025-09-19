@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'l10n/generated/l10n.dart';
-
+import 'l10n/generated/app_localizations.dart';
 import 'sections/header.dart';
 import 'sections/hero.dart';
 import 'sections/about.dart';
@@ -20,7 +19,7 @@ class MyPortfolioApp extends StatefulWidget {
 }
 
 class _MyPortfolioAppState extends State<MyPortfolioApp> {
-  Locale _locale = const Locale('en'); // Idioma por defecto
+  Locale _locale = const Locale('es'); // Idioma por defecto
 
   void setLocale(Locale locale) {
     setState(() {

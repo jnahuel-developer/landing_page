@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/l10n/generated/l10n.dart';
+import 'package:landing_page/l10n/generated/app_localizations.dart';
 
 class HeaderSection extends StatelessWidget {
   final void Function(Locale) onLocaleChange;
