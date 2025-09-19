@@ -77,10 +77,12 @@ class PortfolioHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             HeaderSection(
-              onLocaleChange: onLocaleChange, // 🔹 Pasamos callback para cambiar idioma
+              onLocaleChange: onLocaleChange,
             ),
             const HeroSection(),
-            const AboutMeSection(),
+            AboutMeSection(
+              onLocaleChange: onLocaleChange,
+            ),
             const ServicesSection(),
             const ContactSection(),
           ],
