@@ -51,19 +51,36 @@ class HeaderSection extends StatelessWidget {
   }
 
   Widget _languageSelector(BuildContext context) {
+    final locale = Localizations.localeOf(context);
+
+    String flag;
+    switch (locale.languageCode) {
+      case 'en':
+        flag = 'assets/flags/us.png';
+        break;
+      case 'es':
+        flag = 'assets/flags/es.png';
+        break;
+      case 'it':
+        flag = 'assets/flags/it.png';
+        break;
+      default:
+        flag = 'assets/flags/us.png';
+    }
+
     return PopupMenuButton<Locale>(
-      icon: const Icon(Icons.language, color: Colors.black87),
+      icon: Image.asset(flag, width: 24, height: 24),
       onSelected: onLocaleChange,
-      itemBuilder: (context) => const [
-        PopupMenuItem(
+      itemBuilder: (context) => [
+        const PopupMenuItem(
           value: Locale('en'),
           child: Text("🇺🇸 English"),
         ),
-        PopupMenuItem(
+        const PopupMenuItem(
           value: Locale('es'),
           child: Text("🇦🇷 Español"),
         ),
-        PopupMenuItem(
+        const PopupMenuItem(
           value: Locale('it'),
           child: Text("🇮🇹 Italiano"),
         ),
