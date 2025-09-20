@@ -139,25 +139,25 @@ abstract class AppLocalizations {
   /// No description provided for @aboutLinkedin.
   ///
   /// In es, this message translates to:
-  /// **'LinkedIn'**
+  /// **'Carrera'**
   String get aboutLinkedin;
 
   /// No description provided for @aboutGithub.
   ///
   /// In es, this message translates to:
-  /// **'GitHub'**
+  /// **'Proyectos'**
   String get aboutGithub;
 
   /// No description provided for @aboutPhone.
   ///
   /// In es, this message translates to:
-  /// **'Teléfono'**
+  /// **'Hablemos'**
   String get aboutPhone;
 
   /// No description provided for @aboutEmail.
   ///
   /// In es, this message translates to:
-  /// **'Mail'**
+  /// **'Contacto'**
   String get aboutEmail;
 
   /// No description provided for @aboutPresentation.

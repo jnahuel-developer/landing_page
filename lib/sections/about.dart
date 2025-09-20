@@ -9,7 +9,7 @@ class AboutMeSection extends StatelessWidget {
 
   const AboutMeSection({super.key, required this.onLocaleChange});
 
-  // Actualizá estas URLs con tus enlaces reales
+  // URLs reales
   static const String _linkedinUrl = "https://www.linkedin.com/in/jnahuel/";
   static const String _githubUrl = "https://github.com/jnahuel-developer";
   static const String _whatsappUrl = "https://wa.me/5491161318972";
@@ -24,9 +24,6 @@ class AboutMeSection extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final sidePadding = max(12.0, screenWidth * 0.05); // menos margen lateral
     final innerWidth = screenWidth - sidePadding * 2;
-    final leftWidth = innerWidth * 0.65;
-    final rightWidth = innerWidth - leftWidth;
-    const double horizontalGap = 10.0; // separación entre texto y foto
 
     return Container(
       color: Colors.white,
@@ -40,187 +37,146 @@ class AboutMeSection extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.lightBlue.withOpacity(0.25),
-                blurRadius: 50,
+                blurRadius: 35,
                 spreadRadius: 15,
-                offset: const Offset(0, 15),
+                offset: const Offset(0, 0),
               ),
             ],
           ),
-          child: LayoutBuilder(builder: (context, constraints) {
-            return IntrinsicHeight(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Columna izquierda: texto + botones
-                  SizedBox(
-                    width: leftWidth,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Texto descriptivo
-                        Text(
-                          loc.aboutDescription,
-                          textAlign: TextAlign.justify,
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                fontSize: 18,
-                                height: 1.6,
-                                color: Colors.black87,
-                              ),
-                        ),
-                        const SizedBox(height: 30),
-
-                        // Botones de contacto
-                        SizedBox(
-                          height: 70,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              _contactButton(
-                                width: (leftWidth - 3 * 16) / 4,
-                                assetIcon: "assets/icons/linkedin.png",
-                                label: loc.aboutLinkedin,
-                                onTap: () => _openUrl(_linkedinUrl),
-                              ),
-                              _contactButton(
-                                width: (leftWidth - 3 * 16) / 4,
-                                assetIcon: "assets/icons/github.png",
-                                label: loc.aboutGithub,
-                                onTap: () => _openUrl(_githubUrl),
-                              ),
-                              _contactButton(
-                                width: (leftWidth - 3 * 16) / 4,
-                                assetIcon: "assets/icons/whatsapp.png",
-                                label: loc.aboutPhone,
-                                onTap: () => _openUrl(_whatsappUrl),
-                              ),
-                              _contactButton(
-                                width: (leftWidth - 3 * 16) / 4,
-                                assetIcon: "assets/icons/gmail.png",
-                                label: loc.aboutEmail,
-                                onTap: () => _openUrl(_mailtoUrl),
-                              ),
-                            ],
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Columna izquierda: texto + botones
+              Expanded(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Texto descriptivo
+                    Text(
+                      loc.aboutDescription,
+                      textAlign: TextAlign.justify,
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 18,
+                            height: 1.6,
+                            color: Colors.black87,
                           ),
-                        ),
-                      ],
                     ),
-                  ),
+                    const SizedBox(height: 30),
 
-                  SizedBox(width: horizontalGap),
-
-                  // Columna derecha: foto con botón flotante
-                  SizedBox(
-                    width: rightWidth,
-                    child: LayoutBuilder(builder: (ctx, c2) {
-                      final containerHeight = c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
-                      final double diameter = min(containerHeight * 0.65, rightWidth * 0.75); // 📸 Más grande
-
-                      return Align(
-                        alignment: Alignment.centerLeft, // ↔️ Lo movemos un poco más a la izquierda
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            // Sombra circular radial detrás de la foto
-                            Container(
-                              width: diameter * 1.1,
-                              height: diameter * 1.1,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.blue.withOpacity(0.25),
-                                    blurRadius: 50, // radial uniforme
-                                    spreadRadius: 8,
-                                  ),
-                                ],
-                              ),
-                            ),
-
-                            // Foto circular con borde fino
-                            Container(
-                              width: diameter,
-                              height: diameter,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(
-                                  color: Colors.blue.shade300,
-                                  width: 3, // más fino
-                                ),
-                              ),
-                              child: ClipOval(
-                                child: Image.asset(
-                                  "assets/foto_perfil.jpeg",
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-
-                            // Botón flotante con sombra animada negra
-                            Positioned(
-                              bottom: diameter * 0.20,
-                              child: TweenAnimationBuilder<double>(
-                                tween: Tween(begin: 4.0, end: 14.0),
-                                duration: const Duration(seconds: 2),
-                                curve: Curves.easeInOut,
-                                builder: (context, value, child) {
-                                  return Container(
-                                    decoration: BoxDecoration(
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Colors.black.withOpacity(0.5),
-                                          blurRadius: value * 2,
-                                          spreadRadius: value / 2,
-                                        ),
-                                      ],
-                                    ),
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        _showPresentationDialog(context);
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: const Color(0xFF00AEEF),
-                                        foregroundColor: Colors.white,
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 22,
-                                          vertical: 14,
-                                        ),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(20),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        loc.aboutPresentation,
-                                        style: const TextStyle(fontSize: 20),
-                                      ),
-                                    ),
-                                  );
-                                },
-                                onEnd: () {
-                                  // 🔄 Reinicia la animación para efecto de respiración infinito
-                                  Future.delayed(const Duration(milliseconds: 200), () {
-                                    (context as Element).markNeedsBuild();
-                                  });
-                                },
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-                  ),
-
-
-
-
-                ],
+                    // Botones de contacto
+                    SizedBox(
+                      height: 70,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _contactButton(
+                            width: (innerWidth * 0.65 - 3 * 16) / 4,
+                            assetIcon: "assets/icons/linkedin.png",
+                            label: loc.aboutLinkedin,
+                            onTap: () => _openUrl(_linkedinUrl),
+                          ),
+                          _contactButton(
+                            width: (innerWidth * 0.65 - 3 * 16) / 4,
+                            assetIcon: "assets/icons/github.png",
+                            label: loc.aboutGithub,
+                            onTap: () => _openUrl(_githubUrl),
+                          ),
+                          _contactButton(
+                            width: (innerWidth * 0.65 - 3 * 16) / 4,
+                            assetIcon: "assets/icons/whatsapp.png",
+                            label: loc.aboutPhone,
+                            onTap: () => _openUrl(_whatsappUrl),
+                          ),
+                          _contactButton(
+                            width: (innerWidth * 0.65 - 3 * 16) / 4,
+                            assetIcon: "assets/icons/gmail.png",
+                            label: loc.aboutEmail,
+                            onTap: () => _openUrl(_mailtoUrl),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            );
-          }),
+
+              const SizedBox(width: 40),
+
+              // Columna derecha: foto + botón flotante
+              Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _profileWithButton(context, loc),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
+  /// --- FOTO DE PERFIL + BOTÓN DEBAJO ---
+  Widget _profileWithButton(BuildContext context, AppLocalizations loc) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // tamaño dinámico: 85% del menor lado disponible
+        final double size = 0.85 * (constraints.maxWidth < constraints.maxHeight
+            ? constraints.maxWidth
+            : constraints.maxHeight);
+
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Foto con halo radial
+            Container(
+              width: size,
+              height: size,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.blue.shade200,
+                  width: 6,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.lightBlue.withOpacity(0.4),
+                    blurRadius: 60,
+                    spreadRadius: 10,
+                    offset: const Offset(0, 0),
+                  ),
+                ],
+              ),
+              child: ClipOval(
+                child: Image.asset(
+                  "assets/foto_perfil.jpeg",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 40),
+
+            // Botón con mismo ancho de la foto
+            SizedBox(
+              width: size,
+              child: _BreathingButton(
+                label: loc.aboutPresentation,
+                onPressed: () => _showPresentationDialog(context),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+
+  /// --- BOTONES DE CONTACTO ---
   Widget _contactButton({
     required double width,
     required String assetIcon,
@@ -229,11 +185,12 @@ class AboutMeSection extends StatelessWidget {
   }) {
     return SizedBox(
       width: width,
+      height: 120,
       child: OutlinedButton(
         onPressed: onTap,
         style: OutlinedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 12),
-          side: const BorderSide(color: Color(0xFFBFDFF0)),
+          side: const BorderSide(color: Colors.lightBlue),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           backgroundColor: Colors.white,
@@ -241,13 +198,13 @@ class AboutMeSection extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(assetIcon, height: 26, width: 26),
+            Image.asset(assetIcon, height: 30, width: 30),
             const SizedBox(width: 10),
             Flexible(
               child: Text(
                 label,
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 30,
                   color: Colors.black87,
                 ),
                 overflow: TextOverflow.ellipsis,
@@ -259,20 +216,15 @@ class AboutMeSection extends StatelessWidget {
     );
   }
 
+  /// --- ABRIR LINKS ---
   void _openUrl(String url) {
     try {
       html.window.open(url, '_blank');
     } catch (_) {}
   }
 
+  /// --- POPUP CON YOUTUBE ---
   void _showPresentationDialog(BuildContext context) {
-    // Solo funciona en Flutter Web
-    // ignore: undefined_prefixed_name
-    // Usamos dart:ui_web para registrar el iframe
-    // Esto evita conflictos en Mobile/Desktop
-    // IMPORTANTE: en la parte superior del archivo agregar:
-    // import 'dart:ui_web' as ui_web;
-
     ui_web.platformViewRegistry.registerViewFactory(
       'youtube-iframe',
       (int viewId) => html.IFrameElement()
@@ -285,11 +237,93 @@ class AboutMeSection extends StatelessWidget {
       builder: (ctx) {
         return Dialog(
           insetPadding: const EdgeInsets.all(40),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           child: SizedBox(
             width: 800,
             height: 450,
             child: const HtmlElementView(viewType: 'youtube-iframe'),
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// --- BOTÓN "RESPIRANDO" ---
+class _BreathingButton extends StatefulWidget {
+  final String label;
+  final VoidCallback onPressed;
+  final double width; // ancho dinámico
+  final double height; // alto dinámico
+
+  const _BreathingButton({
+    required this.label,
+    required this.onPressed,
+    this.width = 200,
+    this.height = 48,
+  });
+
+  @override
+  State<_BreathingButton> createState() => _BreathingButtonState();
+}
+
+class _BreathingButtonState extends State<_BreathingButton>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    )..repeat(reverse: true);
+
+    _animation = Tween<double>(begin: 4.0, end: 16.0).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _animation,
+      builder: (context, child) {
+        return Container(
+          width: widget.width,
+          height: widget.height,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(widget.height / 2),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                blurRadius: _animation.value,
+                spreadRadius: _animation.value / 2,
+                offset: const Offset(0, 0), // centrada
+              ),
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: widget.onPressed,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.lightBlue,
+              shape: const StadiumBorder(),
+              shadowColor: Colors.transparent, // sin sombra extra
+              elevation: 0,
+            ),
+            child: Text(
+              widget.label,
+              style: const TextStyle(color: Colors.white, fontSize: 25),
+            ),
           ),
         );
       },

@@ -3,8 +3,13 @@ import 'package:landing_page/l10n/generated/app_localizations.dart';
 
 class HeaderSection extends StatelessWidget {
   final void Function(Locale) onLocaleChange;
+  final void Function(String section) onNavButtonPressed;
 
-  const HeaderSection({super.key, required this.onLocaleChange});
+  const HeaderSection({
+    super.key,
+    required this.onLocaleChange,
+    required this.onNavButtonPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +31,10 @@ class HeaderSection extends StatelessWidget {
           ),
           Row(
             children: [
-              _navButton(loc.login),
-              _navButton(loc.aboutTitle),
-              _navButton(loc.services),
-              _navButton(loc.contact),
+              _navButton(loc.login, 'hero'),
+              _navButton(loc.aboutTitle, 'about'),
+              _navButton(loc.services, 'services'),
+              _navButton(loc.contact, 'contact'),
               _languageSelector(context),
             ],
           ),
@@ -38,13 +43,11 @@ class HeaderSection extends StatelessWidget {
     );
   }
 
-  Widget _navButton(String text) {
+  Widget _navButton(String text, String sectionKey) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: TextButton(
-        onPressed: () {
-          // TODO: implementar scroll a sección
-        },
+        onPressed: () => onNavButtonPressed(sectionKey),
         child: Text(text, style: const TextStyle(color: Colors.black87)),
       ),
     );
