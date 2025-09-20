@@ -45,7 +45,7 @@ class AboutMeSection extends StatelessWidget {
                       child: Text(
                         loc.aboutDescription,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              fontSize: 20, // texto un poco más grande
+                              fontSize: 15,
                               height: 1.5,
                             ),
                       ),
@@ -185,7 +185,7 @@ class AboutMeSection extends StatelessWidget {
               child: Text(
                 label,
                 style: const TextStyle(
-                  fontSize: 18, // más grande que antes
+                  fontSize: 20,
                   color: Colors.black87,
                 ),
                 overflow: TextOverflow.ellipsis,
