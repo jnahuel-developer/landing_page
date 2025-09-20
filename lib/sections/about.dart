@@ -115,7 +115,7 @@ class AboutMeSection extends StatelessWidget {
                       final containerHeight =
                           c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
                       final double diameter =
-                          min(containerHeight * 0.75, rightWidth * 0.9);
+                          min(containerHeight * 0.55, rightWidth * 0.7); // 📌 20-30% más chica
 
                       return Center(
                         child: Stack(
@@ -138,9 +138,9 @@ class AboutMeSection extends StatelessWidget {
                                 ),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.blue.withOpacity(0.3),
-                                    blurRadius: 50,
-                                    spreadRadius: 12,
+                                    color: Colors.blue.withOpacity(0.35),
+                                    blurRadius: 45,
+                                    spreadRadius: 10,
                                   ),
                                 ],
                               ),
@@ -165,26 +165,52 @@ class AboutMeSection extends StatelessWidget {
                               ),
                             ),
 
-                            // Botón flotante
+                            // Botón flotante con animación de respiración
                             Positioned(
                               bottom: diameter * 0.20,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  _showPresentationDialog(context);
+                              child: TweenAnimationBuilder<double>(
+                                tween: Tween(begin: 4.0, end: 12.0),
+                                duration: const Duration(seconds: 2),
+                                curve: Curves.easeInOut,
+                                builder: (context, value, child) {
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: const Color(0xFF00AEEF).withOpacity(0.6),
+                                          blurRadius: value * 2,
+                                          spreadRadius: value / 2,
+                                        ),
+                                      ],
+                                    ),
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        _showPresentationDialog(context);
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color(0xFF00AEEF),
+                                        foregroundColor: Colors.white,
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 22,
+                                          vertical: 14,
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20),
+                                        ),
+                                      ),
+                                      child: Text(
+                                        loc.aboutPresentation,
+                                        style: const TextStyle(fontSize: 20),
+                                      ),
+                                    ),
+                                  );
                                 },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF00AEEF),
-                                  foregroundColor: Colors.white,
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 22, vertical: 14),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                ),
-                                child: Text(
-                                  loc.aboutPresentation,
-                                  style: const TextStyle(fontSize: 20),
-                                ),
+                                onEnd: () {
+                                  // 🔄 Reinicia el loop
+                                  Future.delayed(const Duration(milliseconds: 200), () {
+                                    (context as Element).markNeedsBuild();
+                                  });
+                                },
                               ),
                             ),
                           ],
@@ -192,6 +218,9 @@ class AboutMeSection extends StatelessWidget {
                       );
                     }),
                   ),
+
+
+
                 ],
               ),
             );
