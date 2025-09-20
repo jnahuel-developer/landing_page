@@ -26,7 +26,7 @@ class AboutMeSection extends StatelessWidget {
     final innerWidth = screenWidth - sidePadding * 2;
     final leftWidth = innerWidth * 0.65;
     final rightWidth = innerWidth - leftWidth;
-    const double horizontalGap = 50.0; // separación entre texto y foto
+    const double horizontalGap = 10.0; // separación entre texto y foto
 
     return Container(
       color: Colors.white,
@@ -112,49 +112,39 @@ class AboutMeSection extends StatelessWidget {
                   SizedBox(
                     width: rightWidth,
                     child: LayoutBuilder(builder: (ctx, c2) {
-                      final containerHeight =
-                          c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
-                      final double diameter =
-                          min(containerHeight * 0.55, rightWidth * 0.7); // 📌 20-30% más chica
+                      final containerHeight = c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
+                      final double diameter = min(containerHeight * 0.65, rightWidth * 0.75); // 📸 Más grande
 
-                      return Center(
+                      return Align(
+                        alignment: Alignment.centerLeft, // ↔️ Lo movemos un poco más a la izquierda
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
-                            // Halo de fondo
+                            // Sombra circular radial detrás de la foto
                             Container(
                               width: diameter * 1.1,
                               height: diameter * 1.1,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                gradient: RadialGradient(
-                                  colors: [
-                                    const Color(0xFFDBEEFF),
-                                    const Color(0xFFEAF6FF),
-                                    Colors.white.withOpacity(0.0),
-                                  ],
-                                  stops: const [0.0, 0.6, 1.0],
-                                  center: const Alignment(-0.2, -0.2),
-                                ),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.blue.withOpacity(0.35),
-                                    blurRadius: 45,
-                                    spreadRadius: 10,
+                                    color: Colors.blue.withOpacity(0.25),
+                                    blurRadius: 50, // radial uniforme
+                                    spreadRadius: 8,
                                   ),
                                 ],
                               ),
                             ),
 
-                            // Foto circular
+                            // Foto circular con borde fino
                             Container(
                               width: diameter,
                               height: diameter,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: Colors.blue.shade200,
-                                  width: 5,
+                                  color: Colors.blue.shade300,
+                                  width: 3, // más fino
                                 ),
                               ),
                               child: ClipOval(
@@ -165,11 +155,11 @@ class AboutMeSection extends StatelessWidget {
                               ),
                             ),
 
-                            // Botón flotante con animación de respiración
+                            // Botón flotante con sombra animada negra
                             Positioned(
                               bottom: diameter * 0.20,
                               child: TweenAnimationBuilder<double>(
-                                tween: Tween(begin: 4.0, end: 12.0),
+                                tween: Tween(begin: 4.0, end: 14.0),
                                 duration: const Duration(seconds: 2),
                                 curve: Curves.easeInOut,
                                 builder: (context, value, child) {
@@ -177,7 +167,7 @@ class AboutMeSection extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
-                                          color: const Color(0xFF00AEEF).withOpacity(0.6),
+                                          color: Colors.black.withOpacity(0.5),
                                           blurRadius: value * 2,
                                           spreadRadius: value / 2,
                                         ),
@@ -206,7 +196,7 @@ class AboutMeSection extends StatelessWidget {
                                   );
                                 },
                                 onEnd: () {
-                                  // 🔄 Reinicia el loop
+                                  // 🔄 Reinicia la animación para efecto de respiración infinito
                                   Future.delayed(const Duration(milliseconds: 200), () {
                                     (context as Element).markNeedsBuild();
                                   });
@@ -218,6 +208,7 @@ class AboutMeSection extends StatelessWidget {
                       );
                     }),
                   ),
+
 
 
 
