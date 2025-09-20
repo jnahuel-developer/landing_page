@@ -113,7 +113,7 @@ class AboutMeSection extends StatelessWidget {
                     width: rightWidth,
                     child: LayoutBuilder(builder: (ctx, c2) {
                       final containerHeight =
-                          c2.maxHeight.isFinite ? c2.maxHeight : 550.0;
+                          c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
                       final double diameter =
                           min(containerHeight * 0.9, rightWidth * 1.1);
 
@@ -123,8 +123,8 @@ class AboutMeSection extends StatelessWidget {
                           children: [
                             // Halo de fondo
                             Container(
-                              width: diameter * 1.15,
-                              height: diameter * 1.15,
+                              width: diameter * 1.05,
+                              height: diameter * 1.05,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 gradient: RadialGradient(
@@ -183,7 +183,7 @@ class AboutMeSection extends StatelessWidget {
                                 ),
                                 child: Text(
                                   loc.aboutPresentation,
-                                  style: const TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 20),
                                 ),
                               ),
                             ),
