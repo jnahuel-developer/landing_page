@@ -115,7 +115,7 @@ class AboutMeSection extends StatelessWidget {
                       final containerHeight =
                           c2.maxHeight.isFinite ? c2.maxHeight : 350.0;
                       final double diameter =
-                          min(containerHeight * 0.9, rightWidth * 1.1);
+                          min(containerHeight * 0.75, rightWidth * 0.9);
 
                       return Center(
                         child: Stack(
@@ -123,8 +123,8 @@ class AboutMeSection extends StatelessWidget {
                           children: [
                             // Halo de fondo
                             Container(
-                              width: diameter * 1.05,
-                              height: diameter * 1.05,
+                              width: diameter * 1.1,
+                              height: diameter * 1.1,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 gradient: RadialGradient(
@@ -154,7 +154,7 @@ class AboutMeSection extends StatelessWidget {
                                 shape: BoxShape.circle,
                                 border: Border.all(
                                   color: Colors.blue.shade200,
-                                  width: 6,
+                                  width: 5,
                                 ),
                               ),
                               child: ClipOval(
