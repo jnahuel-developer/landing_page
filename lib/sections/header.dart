@@ -65,7 +65,7 @@ class HeaderSection extends StatelessWidget {
         flag = 'assets/flags/it.png';
         break;
       default:
-        flag = 'assets/flags/us.png';
+        flag = 'assets/flags/es.png';
     }
 
     return PopupMenuButton<Locale>(
