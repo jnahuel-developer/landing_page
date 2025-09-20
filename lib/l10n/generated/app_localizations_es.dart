@@ -40,5 +40,5 @@ class AppLocalizationsEs extends AppLocalizations {
   String get aboutEmail => 'Mail';
 
   @override
-  String get aboutPresentation => 'Presentación';
+  String get aboutPresentation => 'Ver presentación';
 }

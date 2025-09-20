@@ -163,7 +163,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutPresentation.
   ///
   /// In es, this message translates to:
-  /// **'Presentación'**
+  /// **'Ver presentación'**
   String get aboutPresentation;
 }
 
