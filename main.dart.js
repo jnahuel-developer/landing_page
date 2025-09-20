@@ -81682,9 +81682,9 @@ A.a16.prototype={
 $0(){return this.a.vC("mailto:jnahuel.developer@gmail.com")},
 $S:0}
 A.a17.prototype={
-$2(a,b){var s,r=this,q=null,p=b.d,o=Math.min((isFinite(p)?p:350)*0.9,r.b*1.1),n=o*1.05,m=A.c([B.IX,B.IS,A.aw(0,B.l.C()>>>16&255,B.l.C()>>>8&255,B.l.C()&255)],t.t_)
+$2(a,b){var s,r=this,q=null,p=b.d,o=Math.min((isFinite(p)?p:350)*0.75,r.b*0.9),n=o*1.1,m=A.c([B.IX,B.IS,A.aw(0,B.l.C()>>>16&255,B.l.C()>>>8&255,B.l.C()&255)],t.t_)
 n=A.j_(q,B.E,q,new A.ec(q,q,q,q,A.c([new A.d8(12,B.cN,A.aw(B.c.aP(76.5),B.da.C()>>>16&255,B.da.C()>>>8&255,B.da.C()&255),B.h,50)],t.sq),new A.rC(B.G0,0.5,B.ee,q,0,m,B.Lw,q),B.fG),n,q,q,n)
-m=A.awM(B.jG,6)
+m=A.awM(B.jG,5)
 m=A.j_(new A.Go(A.atX("assets/foto_perfil.jpeg",B.ds,q,q),q),B.E,q,new A.ec(q,q,m,q,q,q,B.fG),o,q,q,o)
 s=A.axP(q,q,B.c1,q,q,q,q,q,q,B.l,q,q,B.K0,q,new A.cF(A.iU(20),B.u),q,q,q,q,q)
 return A.jU(A.t3(B.S,A.c([n,m,A.auo(o*0.2,A.axO(A.eA(r.d.gCQ(),q,q,q,B.a5B,q,q),new A.a12(r.a,r.c),s),q,q,q,q,q,q)],t.E),B.al,B.ea),q,q)},
