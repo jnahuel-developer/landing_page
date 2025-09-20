@@ -61,6 +61,7 @@ flutter:
   uses-material-design: true
   generate: true
   assets:
+    - assets/foto_perfil.jpeg
     - assets/electronics_bg.jpg
     - assets/flags/us.png
     - assets/flags/es.png
