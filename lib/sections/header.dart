@@ -35,7 +35,7 @@ class HeaderSection extends StatelessWidget {
               _navButton(loc.aboutTitle, 'about'),
               _navButton(loc.services, 'services'),
               _navButton(loc.contact, 'contact'),
-              _languageSelector(context),
+              _languageSelector(context, loc),
             ],
           ),
         ],
@@ -53,7 +53,7 @@ class HeaderSection extends StatelessWidget {
     );
   }
 
-  Widget _languageSelector(BuildContext context) {
+  Widget _languageSelector(BuildContext context, AppLocalizations loc) {
     final locale = Localizations.localeOf(context);
 
     String flag;
@@ -75,17 +75,17 @@ class HeaderSection extends StatelessWidget {
       icon: Image.asset(flag, width: 24, height: 24),
       onSelected: onLocaleChange,
       itemBuilder: (context) => [
-        const PopupMenuItem(
-          value: Locale('en'),
-          child: Text("🇺🇸 English"),
+        PopupMenuItem(
+          value: const Locale('es'),
+          child: Text(loc.languageSpanish),
         ),
-        const PopupMenuItem(
-          value: Locale('es'),
-          child: Text("🇦🇷 Español"),
+        PopupMenuItem(
+          value: const Locale('en'),
+          child: Text(loc.languageEnglish),
         ),
-        const PopupMenuItem(
-          value: Locale('it'),
-          child: Text("🇮🇹 Italiano"),
+        PopupMenuItem(
+          value: const Locale('it'),
+          child: Text(loc.languageItalian),
         ),
       ],
     );

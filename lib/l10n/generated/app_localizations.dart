@@ -124,6 +124,36 @@ abstract class AppLocalizations {
   /// **'Contacto'**
   String get contact;
 
+  /// No description provided for @languageSpanish.
+  ///
+  /// In es, this message translates to:
+  /// **'🇦🇷 Español'**
+  String get languageSpanish;
+
+  /// No description provided for @languageEnglish.
+  ///
+  /// In es, this message translates to:
+  /// **'🇺🇸 English'**
+  String get languageEnglish;
+
+  /// No description provided for @languageItalian.
+  ///
+  /// In es, this message translates to:
+  /// **'🇮🇹 Italiano'**
+  String get languageItalian;
+
+  /// No description provided for @heroMain.
+  ///
+  /// In es, this message translates to:
+  /// **'Ingeniero Electrónico & Desarrollador Freelance'**
+  String get heroMain;
+
+  /// No description provided for @heroExpanded.
+  ///
+  /// In es, this message translates to:
+  /// **'Software • Hardware • Android • Web • Investigación • Optimización de procesos'**
+  String get heroExpanded;
+
   /// No description provided for @aboutTitle.
   ///
   /// In es, this message translates to:

@@ -21,6 +21,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get contact => 'Contact';
 
   @override
+  String get languageSpanish => '🇦🇷 Spanish';
+
+  @override
+  String get languageEnglish => '🇺🇸 English';
+
+  @override
+  String get languageItalian => '🇮🇹 Italian';
+
+  @override
+  String get heroMain => 'Electronic Engineer & Freelance Developer';
+
+  @override
+  String get heroExpanded =>
+      'Software • Hardware • Android • Web • Research • Process Optimization';
+
+  @override
   String get aboutTitle => 'About Me';
 
   @override

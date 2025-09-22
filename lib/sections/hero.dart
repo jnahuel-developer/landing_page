@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/l10n/generated/app_localizations.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
     return Container(
       height: 400,
       decoration: const BoxDecoration(
@@ -18,20 +21,20 @@ class HeroSection extends StatelessWidget {
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
-              "Ingeniero Electrónico & Desarrollador Freelance",
-              style: TextStyle(
+              loc.heroMain,
+              style: const TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Text(
-              "Software • Hardware • Android • Web • IoT • Investigación • Optimización de procesos",
-              style: TextStyle(fontSize: 18, color: Colors.white70),
+              loc.heroExpanded,
+              style: const TextStyle(fontSize: 18, color: Colors.white70),
               textAlign: TextAlign.center,
             ),
           ],
