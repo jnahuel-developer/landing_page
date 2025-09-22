@@ -130,6 +130,18 @@ abstract class AppLocalizations {
   /// **'Sobre mí'**
   String get aboutTitle;
 
+  /// No description provided for @aboutShowMore.
+  ///
+  /// In es, this message translates to:
+  /// **'Conocer más'**
+  String get aboutShowMore;
+
+  /// No description provided for @aboutShortDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Soy Ingeniero Electrónico con más de siete años de experiencia en el desarrollo de software y productos, habiendo trabajado en industrias altamente exigentes en el cumplimiento de normativas de calidad y diseño ISO. Hoy ofrezco servicios de desarrollo freelance, diseñando y creando soluciones digitales a tu medida: aplicaciones, sitios web y sistemas de gestión que integran servicios en la nube y APIs, para que tengas exactamente lo que tu proyecto necesita.'**
+  String get aboutShortDescription;
+
   /// No description provided for @aboutDescription.
   ///
   /// In es, this message translates to:

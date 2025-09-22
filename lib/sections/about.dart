@@ -4,10 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/l10n/generated/app_localizations.dart';
 import 'dart:ui_web' as ui_web;
 
-class AboutMeSection extends StatelessWidget {
+class AboutMeSection extends StatefulWidget {
   final void Function(Locale) onLocaleChange;
 
   const AboutMeSection({super.key, required this.onLocaleChange});
+
+  @override
+  State<AboutMeSection> createState() => _AboutMeSectionState();
+}
+
+class _AboutMeSectionState extends State<AboutMeSection> {
+  bool _expanded = false;
 
   // URLs reales
   static const String _linkedinUrl = "https://www.linkedin.com/in/jnahuel/";
@@ -22,7 +29,7 @@ class AboutMeSection extends StatelessWidget {
     final loc = AppLocalizations.of(context)!;
 
     final screenWidth = MediaQuery.of(context).size.width;
-    final sidePadding = max(12.0, screenWidth * 0.05); // menos margen lateral
+    final sidePadding = max(12.0, screenWidth * 0.05);
     final innerWidth = screenWidth - sidePadding * 2;
 
     return Container(
@@ -52,26 +59,64 @@ class AboutMeSection extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Texto descriptivo
-                    Text(
-                      loc.aboutDescription,
-                      textAlign: TextAlign.justify,
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            fontSize: 18,
-                            height: 1.6,
-                            color: Colors.black87,
+                    AnimatedCrossFade(
+                      firstChild: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const SizedBox(height: 90),
+                          Text(
+                            loc.aboutShortDescription,
+                            textAlign: TextAlign.justify,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge
+                                ?.copyWith(
+                                  fontSize: 22,
+                                  height: 1.6,
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.w500,
+                                ),
                           ),
+                          const SizedBox(height: 90),
+                          SizedBox(
+                            width: 250,
+                            child: _BreathingButton(
+                              label: loc.aboutShowMore,
+                              onPressed: () {
+                                setState(() {
+                                  _expanded = true;
+                                });
+                              },
+                            ),
+                          ),
+                          const SizedBox(height: 90),
+                        ],
+                      ),
+                      secondChild: Text(
+                        loc.aboutDescription,
+                        textAlign: TextAlign.justify,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              fontSize: 18,
+                              height: 1.6,
+                              color: Colors.black87,
+                            ),
+                      ),
+                      crossFadeState: _expanded
+                          ? CrossFadeState.showSecond
+                          : CrossFadeState.showFirst,
+                      duration: const Duration(milliseconds: 400),
                     ),
-                    const SizedBox(height: 30),
+
+                    const SizedBox(height: 20),
 
                     // Botones de contacto
                     SizedBox(
-                      height: 70,
+                      height: 60,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           _contactButton(
-                            width: (innerWidth * 0.65 - 3 * 16) / 4,
+                            width: (innerWidth * 0.65 - 3 * 16) / 4 - 35,
                             assetIcon: "assets/icons/linkedin.png",
                             label: loc.aboutLinkedin,
                             onTap: () => _openUrl(_linkedinUrl),
@@ -124,7 +169,6 @@ class AboutMeSection extends StatelessWidget {
   Widget _profileWithButton(BuildContext context, AppLocalizations loc) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // tamaño dinámico: 85% del menor lado disponible
         final double size = 0.85 * (constraints.maxWidth < constraints.maxHeight
             ? constraints.maxWidth
             : constraints.maxHeight);
@@ -174,7 +218,6 @@ class AboutMeSection extends StatelessWidget {
       },
     );
   }
-
 
   /// --- BOTONES DE CONTACTO ---
   Widget _contactButton({
@@ -254,8 +297,8 @@ class AboutMeSection extends StatelessWidget {
 class _BreathingButton extends StatefulWidget {
   final String label;
   final VoidCallback onPressed;
-  final double width; // ancho dinámico
-  final double height; // alto dinámico
+  final double width;
+  final double height;
 
   const _BreathingButton({
     required this.label,
@@ -308,7 +351,7 @@ class _BreathingButtonState extends State<_BreathingButton>
                 color: Colors.black.withOpacity(0.5),
                 blurRadius: _animation.value,
                 spreadRadius: _animation.value / 2,
-                offset: const Offset(0, 0), // centrada
+                offset: const Offset(0, 0),
               ),
             ],
           ),
@@ -317,12 +360,12 @@ class _BreathingButtonState extends State<_BreathingButton>
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.lightBlue,
               shape: const StadiumBorder(),
-              shadowColor: Colors.transparent, // sin sombra extra
+              shadowColor: Colors.transparent,
               elevation: 0,
             ),
             child: Text(
               widget.label,
-              style: const TextStyle(color: Colors.white, fontSize: 25),
+              style: const TextStyle(color: Colors.white, fontSize: 22),
             ),
           ),
         );
