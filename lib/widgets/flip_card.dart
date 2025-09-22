@@ -5,8 +5,14 @@ import '../pages/service_detail_page.dart';
 class FlipCard extends StatefulWidget {
   final String title;
   final String description;
+  final String? backgroundImage; // 👈 nuevo parámetro
 
-  const FlipCard({super.key, required this.title, required this.description});
+  const FlipCard({
+    super.key,
+    required this.title,
+    required this.description,
+    this.backgroundImage,
+  });
 
   @override
   State<FlipCard> createState() => _FlipCardState();
@@ -77,34 +83,72 @@ class _FlipCardState extends State<FlipCard>
     );
   }
 
+  /// --- CARA FRONTAL ---
   Widget _buildFront() {
     return _cardBase(
-      Center(
-        child: Text(
-          widget.title,
-          style: const TextStyle(
-              fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+      Stack(
+        fit: StackFit.expand,
+        children: [
+          // Imagen de fondo (si existe)
+          if (widget.backgroundImage != null)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                widget.backgroundImage!,
+                fit: BoxFit.cover,
+              ),
+            ),
+
+          // Overlay oscuro para contraste
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: Colors.black.withOpacity(0.4),
+            ),
+          ),
+
+          // Título centrado
+          Center(
+            child: Text(
+              widget.title,
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
       ),
-      color: const Color(0xFF00AEEF),
+      color: Colors.transparent,
     );
   }
 
+  /// --- CARA TRASERA ---
   Widget _buildBack() {
     return _cardBase(
       Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Text(widget.description, textAlign: TextAlign.center),
+        child: Text(
+          widget.description,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 16),
+        ),
       ),
       color: Colors.white,
       borderColor: const Color(0xFF00AEEF),
     );
   }
 
-  Widget _cardBase(Widget child,
-      {required Color color, Color borderColor = Colors.transparent}) {
+  /// --- BASE DE TARJETA ---
+  Widget _cardBase(
+    Widget child, {
+    required Color color,
+    Color borderColor = Colors.transparent,
+  }) {
     return Container(
-      width: 300, // más grande
+      width: 300,
       height: 250,
       decoration: BoxDecoration(
         color: color,
@@ -114,7 +158,7 @@ class _FlipCardState extends State<FlipCard>
           BoxShadow(
             color: Colors.black12,
             blurRadius: 8,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           )
         ],
       ),
