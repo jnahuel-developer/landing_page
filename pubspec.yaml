@@ -77,7 +77,7 @@ flutter:
     - assets/servicios/tarjeta-servicio-optimizacion-procesos.png
     - assets/servicios/tarjeta-servicio-iot.png
     - assets/servicios/tarjeta-servicio-ios.jpg
-    - assets/servicios/tarjeta-servicio-arduino.jpeg
+    - assets/servicios/tarjeta-servicio-arduino.png
     - assets/servicios/tarjeta-servicio-esquematicos.png
 
   # To add assets to your application, add an assets section, like this:
