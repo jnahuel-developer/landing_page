@@ -5,12 +5,16 @@ import 'package:landing_page/l10n/generated/app_localizations.dart';
 class FlipCard extends StatefulWidget {
   final String title;
   final String description;
+  final String longDescription;
+  final String examples;
   final String? backgroundImage;
 
   const FlipCard({
     super.key,
     required this.title,
     required this.description,
+    required this.longDescription,
+    required this.examples,
     this.backgroundImage,
   });
 
@@ -48,6 +52,9 @@ class _FlipCardState extends State<FlipCard>
   void _showDetailPopup(BuildContext context) {
     final loc = AppLocalizations.of(context)!;
 
+    // Dividir los ejemplos en lista (se almacenan en el .arb con "\n")
+    final examples = widget.examples?.split("\n") ?? [];
+
     showDialog(
       context: context,
       builder: (ctx) {
@@ -60,24 +67,71 @@ class _FlipCardState extends State<FlipCard>
             width: 500,
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  widget.title,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                // --- Título ---
+                Center(
+                  child: Text(
+                    widget.title,
+                    style: const TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 20),
+
+                // --- Descripción larga ---
                 Text(
-                  widget.description,
-                  textAlign: TextAlign.center,
+                  widget.longDescription ?? "",
                   style: const TextStyle(fontSize: 16),
+                  textAlign: TextAlign.justify,
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () => Navigator.pop(ctx),
-                  child: Text(loc.flipCardPopupClose),
+
+                // --- Ejemplos ---
+                if (examples.isNotEmpty) ...[
+                  const Text(
+                    "Ejemplos:",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+
+                  // Lista tipo tabla con colores alternados
+                  Column(
+                    children: List.generate(examples.length, (index) {
+                      final example = examples[index].replaceAll("• ", "");
+                      final bgColor =
+                          index.isEven ? Colors.grey[200] : Colors.white;
+                      return Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 12,
+                        ),
+                        color: bgColor,
+                        child: Text(
+                          "• $example",
+                          style: const TextStyle(fontSize: 15),
+                        ),
+                      );
+                    }),
+                  ),
+                ],
+
+                const SizedBox(height: 20),
+
+                // --- Botón cerrar ---
+                Align(
+                  alignment: Alignment.center,
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.pop(ctx),
+                    child: Text(loc.flipCardPopupClose),
+                  ),
                 )
               ],
             ),
@@ -86,6 +140,7 @@ class _FlipCardState extends State<FlipCard>
       },
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
