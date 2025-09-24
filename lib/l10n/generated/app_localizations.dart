@@ -328,23 +328,11 @@ abstract class AppLocalizations {
   /// **'Desarrollo de aplicaciones Android personalizadas, diseñadas para adaptarse a las necesidades específicas de tu negocio o proyecto. Creo soluciones intuitivas y modernas que mejoran la experiencia del usuario, integrando servicios en la nube, notificaciones, sistemas de autenticación y sincronización de datos en tiempo real. Mis desarrollos buscan siempre ser escalables, seguros y fáciles de mantener, para que tu inversión rinda a largo plazo.'**
   String get serviceAndroidLongDescription;
 
-  /// No description provided for @serviceAndroidExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• App para gestión de clientes\n• App para gestión de turnos\n• App para gestión de stock\n• App para almacenamiento de fotos, videos y archivos importantes'**
-  String get serviceAndroidExamples;
-
   /// No description provided for @serviceWebLongDescription.
   ///
   /// In es, this message translates to:
   /// **'Diseño y desarrollo de aplicaciones web modernas, accesibles desde cualquier dispositivo y pensadas para ofrecer la mejor experiencia al usuario. Construyo sitios y sistemas con interfaces atractivas y rápidas, que se adaptan a las necesidades de tu negocio, ya sea para brindar información, gestionar procesos internos o crear plataformas interactivas para tus clientes. Cada desarrollo está pensado para crecer en el tiempo, integrándose con bases de datos, servicios en la nube y APIs externas.'**
   String get serviceWebLongDescription;
-
-  /// No description provided for @serviceWebExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Plataforma de reservas online\n• Portal de clientes con login y área privada\n• Sistema de gestión de pedidos\n• Sitio institucional con panel de administración'**
-  String get serviceWebExamples;
 
   /// No description provided for @serviceSqlLongDescription.
   ///
@@ -352,23 +340,11 @@ abstract class AppLocalizations {
   /// **'Diseño y administración de bases de datos SQL robustas, que aseguran el manejo eficiente, seguro y confiable de la información crítica de tu negocio. Cada base de datos se estructura pensando en la escalabilidad y en la velocidad de acceso, garantizando la estabilidad de las aplicaciones que la utilizan. Además, implemento buenas prácticas de seguridad y respaldo, para que tus datos estén siempre protegidos.'**
   String get serviceSqlLongDescription;
 
-  /// No description provided for @serviceSqlExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Base de datos para gestión de usuarios y clientes\n• Base de datos para inventarios y stock\n• Registro de transacciones financieras\n• Sistemas de reportes personalizados'**
-  String get serviceSqlExamples;
-
   /// No description provided for @serviceProductLongDescription.
   ///
   /// In es, this message translates to:
   /// **'Acompaño el desarrollo completo de productos tecnológicos, desde la idea inicial hasta la puesta en marcha. Esto incluye la planificación, diseño y ejecución de cada etapa, buscando que el resultado final no solo cumpla con tus expectativas, sino que también se adapte a estándares de calidad y eficiencia productiva. Trabajo junto a vos para convertir una idea en un producto real, optimizando costos y reduciendo riesgos en el camino.'**
   String get serviceProductLongDescription;
-
-  /// No description provided for @serviceProductExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Desarrollo de un dispositivo electrónico portátil\n• Creación de un producto de consumo con conectividad IoT\n• Equipos médicos bajo normativas de calidad\n• Sistemas de automatización para pymes'**
-  String get serviceProductExamples;
 
   /// No description provided for @servicePcbLongDescription.
   ///
@@ -376,23 +352,11 @@ abstract class AppLocalizations {
   /// **'Diseño de circuitos impresos (PCB) y esquemáticos electrónicos optimizados para garantizar la mejor relación entre calidad, funcionalidad y costos de producción. Cada diseño se realiza teniendo en cuenta normativas de calidad, compatibilidad de componentes y facilidad de montaje, reduciendo riesgos y mejorando la eficiencia en la fabricación. Mi objetivo es ayudarte a transformar tus ideas en placas electrónicas listas para la producción, confiables y sostenibles en el tiempo.'**
   String get servicePcbLongDescription;
 
-  /// No description provided for @servicePcbExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Diseño de PCB para equipos médicos\n• PCB para dispositivos de consumo masivo\n• Placas para sistemas de control industrial\n• Optimización de diseños para reducir costos de fabricación'**
-  String get servicePcbExamples;
-
   /// No description provided for @servicePrototypeLongDescription.
   ///
   /// In es, this message translates to:
   /// **'Desarrollo de prototipos electrónicos que permiten validar rápidamente una idea antes de llevarla a la producción en serie. El prototipado es clave para probar funcionalidades, detectar mejoras y reducir costos futuros, asegurando que el producto final cumpla con los objetivos propuestos. Trabajo en estrecha colaboración para que tu proyecto pase de concepto a prototipo funcional en el menor tiempo posible.'**
   String get servicePrototypeLongDescription;
-
-  /// No description provided for @servicePrototypeExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Prototipo de un dispositivo IoT con sensores\n• Prototipo de una aplicación integrada con hardware\n• Validación temprana de un producto electrónico\n• Prototipos para presentaciones a inversores o ferias'**
-  String get servicePrototypeExamples;
 
   /// No description provided for @serviceOptimizationLongDescription.
   ///
@@ -400,29 +364,65 @@ abstract class AppLocalizations {
   /// **'Análisis y mejora de procesos productivos y de software con el fin de aumentar la eficiencia, reducir costos y mejorar la calidad. Mi experiencia en industrias reguladas me permite detectar cuellos de botella, proponer soluciones prácticas y aplicar estándares de calidad que impactan directamente en la productividad. El objetivo es que tus procesos sean más ágiles, confiables y sostenibles en el tiempo.'**
   String get serviceOptimizationLongDescription;
 
-  /// No description provided for @serviceOptimizationExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Reducción de costos en la producción de electrónica\n• Optimización de tiempos de calibración y control\n• Estandarización de procesos de software\n• Mejora en la trazabilidad de productos'**
-  String get serviceOptimizationExamples;
-
   /// No description provided for @serviceIotLongDescription.
   ///
   /// In es, this message translates to:
   /// **'Desarrollo de soluciones de Internet of Things que conectan dispositivos físicos con plataformas digitales, generando información valiosa y nuevas oportunidades de negocio. Integro hardware y software en sistemas conectados, con foco en la recolección de datos, la comunicación en tiempo real y la facilidad de uso. Esto te permite monitorear, automatizar y escalar tus proyectos de manera eficiente y confiable.'**
   String get serviceIotLongDescription;
 
-  /// No description provided for @serviceIotExamples.
-  ///
-  /// In es, this message translates to:
-  /// **'• Sistema de monitoreo remoto de sensores\n• Control de dispositivos industriales desde una app\n• Soluciones de domótica para hogares y oficinas\n• Dispositivos conectados con almacenamiento en la nube'**
-  String get serviceIotExamples;
-
   /// No description provided for @serviceIosLongDescription.
   ///
   /// In es, this message translates to:
   /// **'Desarrollo de aplicaciones para iOS con interfaces modernas y fluidas, pensadas para brindar una experiencia confiable a los usuarios de iPhone y iPad. Mis desarrollos contemplan la integración de servicios en la nube, sincronización de datos y conexión con APIs, asegurando que tu aplicación sea completa, segura y escalable. El objetivo es crear apps que no solo funcionen bien, sino que generen valor real para tu negocio o emprendimiento.'**
   String get serviceIosLongDescription;
+
+  /// No description provided for @serviceAndroidExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• App para gestión de clientes\n• App para gestión de turnos\n• App para gestión de stock\n• App para almacenamiento de fotos, videos y archivos importantes'**
+  String get serviceAndroidExamples;
+
+  /// No description provided for @serviceWebExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Plataforma de reservas online\n• Portal de clientes con login y área privada\n• Sistema de gestión de pedidos\n• Sitio institucional con panel de administración'**
+  String get serviceWebExamples;
+
+  /// No description provided for @serviceSqlExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Base de datos para gestión de usuarios y clientes\n• Base de datos para inventarios y stock\n• Registro de transacciones financieras\n• Sistemas de reportes personalizados'**
+  String get serviceSqlExamples;
+
+  /// No description provided for @serviceProductExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Desarrollo de un dispositivo electrónico portátil\n• Creación de un producto de consumo con conectividad IoT\n• Equipos médicos bajo normativas de calidad\n• Sistemas de automatización para pymes'**
+  String get serviceProductExamples;
+
+  /// No description provided for @servicePcbExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Diseño de PCB para equipos médicos\n• PCB para dispositivos de consumo masivo\n• Placas para sistemas de control industrial\n• Optimización de diseños para reducir costos de fabricación'**
+  String get servicePcbExamples;
+
+  /// No description provided for @servicePrototypeExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Prototipo de un dispositivo IoT con sensores\n• Prototipo de una aplicación integrada con hardware\n• Validación temprana de un producto electrónico\n• Prototipos para presentaciones a inversores o ferias'**
+  String get servicePrototypeExamples;
+
+  /// No description provided for @serviceOptimizationExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Reducción de costos en la producción de electrónica\n• Optimización de tiempos de calibración y control\n• Estandarización de procesos de software\n• Mejora en la trazabilidad de productos'**
+  String get serviceOptimizationExamples;
+
+  /// No description provided for @serviceIotExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Sistema de monitoreo remoto de sensores\n• Control de dispositivos industriales desde una app\n• Soluciones de domótica para hogares y oficinas\n• Dispositivos conectados con almacenamiento en la nube'**
+  String get serviceIotExamples;
 
   /// No description provided for @serviceIosExamples.
   ///
@@ -447,6 +447,48 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Cerrar'**
   String get flipCardPopupClose;
+
+  /// No description provided for @contactTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Contacto'**
+  String get contactTitle;
+
+  /// No description provided for @contactName.
+  ///
+  /// In es, this message translates to:
+  /// **'Nombre'**
+  String get contactName;
+
+  /// No description provided for @contactEmail.
+  ///
+  /// In es, this message translates to:
+  /// **'Email'**
+  String get contactEmail;
+
+  /// No description provided for @contactMessage.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje'**
+  String get contactMessage;
+
+  /// No description provided for @contactSend.
+  ///
+  /// In es, this message translates to:
+  /// **'Enviar'**
+  String get contactSend;
+
+  /// No description provided for @contactSentSuccess.
+  ///
+  /// In es, this message translates to:
+  /// **'Mensaje enviado correctamente. ¡Gracias!'**
+  String get contactSentSuccess;
+
+  /// No description provided for @contactSentError.
+  ///
+  /// In es, this message translates to:
+  /// **'Error al enviar el mensaje. Intentá nuevamente.'**
+  String get contactSentError;
 }
 
 class _AppLocalizationsDelegate

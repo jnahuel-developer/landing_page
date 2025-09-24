@@ -136,68 +136,68 @@ class AppLocalizationsIt extends AppLocalizations {
       'Sviluppo di applicazioni Android personalizzate, progettate per adattarsi alle esigenze specifiche della tua attività o progetto. Creo soluzioni intuitive e moderne che migliorano l’esperienza dell’utente, integrando servizi cloud, notifiche, sistemi di autenticazione e sincronizzazione dei dati in tempo reale. I miei sviluppi sono sempre pensati per essere scalabili, sicuri e facili da mantenere, garantendo un investimento solido e duraturo.';
 
   @override
-  String get serviceAndroidExamples =>
-      '• App per la gestione dei clienti\n• App per la gestione degli appuntamenti\n• App per la gestione dell’inventario\n• App per l’archiviazione di foto, video e file importanti';
-
-  @override
   String get serviceWebLongDescription =>
       'Progettazione e sviluppo di applicazioni web moderne, accessibili da qualsiasi dispositivo e pensate per offrire la migliore esperienza utente. Realizzo siti e sistemi con interfacce attraenti e veloci, adattati alle esigenze della tua attività, sia per fornire informazioni, gestire processi interni o creare piattaforme interattive per i tuoi clienti. Ogni progetto è pensato per crescere nel tempo, integrandosi con database, servizi cloud e API esterne.';
-
-  @override
-  String get serviceWebExamples =>
-      '• Piattaforma di prenotazioni online\n• Portale clienti con login e area riservata\n• Sistema di gestione ordini\n• Sito aziendale con pannello di amministrazione';
 
   @override
   String get serviceSqlLongDescription =>
       'Progettazione e gestione di database SQL robusti, che garantiscono la gestione efficiente, sicura e affidabile delle informazioni critiche della tua attività. Ogni database è strutturato per scalabilità e rapidità di accesso, assicurando la stabilità delle applicazioni che lo utilizzano. Inoltre, applico le migliori pratiche di sicurezza e backup per mantenere i tuoi dati sempre protetti.';
 
   @override
-  String get serviceSqlExamples =>
-      '• Database per la gestione di utenti e clienti\n• Database per inventario e magazzino\n• Registri di transazioni finanziarie\n• Sistemi di reportistica personalizzata';
-
-  @override
   String get serviceProductLongDescription =>
       'Offro supporto completo nello sviluppo di prodotti tecnologici, dall’idea iniziale fino al lancio sul mercato. Questo include pianificazione, progettazione ed esecuzione di ogni fase, garantendo che il risultato finale non solo soddisfi le tue aspettative, ma rispetti anche standard di qualità ed efficienza. Lavoro al tuo fianco per trasformare un’idea in un prodotto reale, ottimizzando i costi e riducendo i rischi lungo il percorso.';
-
-  @override
-  String get serviceProductExamples =>
-      '• Sviluppo di un dispositivo elettronico portatile\n• Creazione di un prodotto di consumo con connettività IoT\n• Apparecchiature mediche conformi agli standard di qualità\n• Sistemi di automazione per PMI';
 
   @override
   String get servicePcbLongDescription =>
       'Progettazione di circuiti stampati (PCB) e schemi elettronici ottimizzati per garantire il miglior equilibrio tra qualità, funzionalità e costi di produzione. Ogni progetto viene realizzato tenendo conto degli standard di qualità, della compatibilità dei componenti e della facilità di assemblaggio, riducendo i rischi e migliorando l’efficienza produttiva. Il mio obiettivo è aiutarti a trasformare le tue idee in schede elettroniche pronte per la produzione, affidabili e sostenibili nel tempo.';
 
   @override
-  String get servicePcbExamples =>
-      '• Progettazione PCB per apparecchiature mediche\n• PCB per dispositivi di consumo\n• Schede per sistemi di controllo industriale\n• Ottimizzazione dei progetti per ridurre i costi di produzione';
-
-  @override
   String get servicePrototypeLongDescription =>
       'Sviluppo di prototipi elettronici che consentono di validare rapidamente un’idea prima della produzione di massa. La prototipazione è fondamentale per testare funzionalità, individuare miglioramenti e ridurre i costi futuri, garantendo che il prodotto finale rispetti gli obiettivi prefissati. Lavoro al tuo fianco per trasformare il progetto da concetto a prototipo funzionale nel minor tempo possibile.';
-
-  @override
-  String get servicePrototypeExamples =>
-      '• Prototipo di un dispositivo IoT con sensori\n• Prototipo di un’applicazione integrata con hardware\n• Validazione precoce di un prodotto elettronico\n• Prototipi per presentazioni a investitori o fiere';
 
   @override
   String get serviceOptimizationLongDescription =>
       'Analisi e miglioramento dei processi produttivi e software per aumentare l’efficienza, ridurre i costi e migliorare la qualità. La mia esperienza in settori regolamentati mi permette di individuare colli di bottiglia, proporre soluzioni pratiche e applicare standard di qualità che hanno un impatto diretto sulla produttività. L’obiettivo è rendere i tuoi processi più agili, affidabili e sostenibili nel tempo.';
 
   @override
-  String get serviceOptimizationExamples =>
-      '• Riduzione dei costi nella produzione elettronica\n• Ottimizzazione dei tempi di calibrazione e controllo\n• Standardizzazione dei processi software\n• Miglioramento della tracciabilità dei prodotti';
-
-  @override
   String get serviceIotLongDescription =>
       'Sviluppo di soluzioni Internet of Things che collegano dispositivi fisici a piattaforme digitali, generando informazioni preziose e nuove opportunità di business. Integro hardware e software in sistemi connessi, con focus sulla raccolta dati, comunicazione in tempo reale e facilità d’uso. Questo ti permette di monitorare, automatizzare e scalare i tuoi progetti in modo efficiente e affidabile.';
 
   @override
-  String get serviceIotExamples =>
-      '• Sistema di monitoraggio remoto dei sensori\n• Controllo di dispositivi industriali tramite app\n• Soluzioni di domotica per case e uffici\n• Dispositivi connessi con archiviazione cloud';
-
-  @override
   String get serviceIosLongDescription =>
       'Sviluppo di applicazioni iOS con interfacce moderne e fluide, progettate per offrire un’esperienza affidabile agli utenti di iPhone e iPad. I miei progetti prevedono l’integrazione con servizi cloud, sincronizzazione dei dati e connessione con API, garantendo che l’app sia completa, sicura e scalabile. L’obiettivo è creare applicazioni che non solo funzionino bene, ma che portino un reale valore alla tua attività o impresa.';
+
+  @override
+  String get serviceAndroidExamples =>
+      '• App per la gestione dei clienti\n• App per la gestione degli appuntamenti\n• App per la gestione dell’inventario\n• App per l’archiviazione di foto, video e file importanti';
+
+  @override
+  String get serviceWebExamples =>
+      '• Piattaforma di prenotazioni online\n• Portale clienti con login e area riservata\n• Sistema di gestione ordini\n• Sito aziendale con pannello di amministrazione';
+
+  @override
+  String get serviceSqlExamples =>
+      '• Database per la gestione di utenti e clienti\n• Database per inventario e magazzino\n• Registri di transazioni finanziarie\n• Sistemi di reportistica personalizzata';
+
+  @override
+  String get serviceProductExamples =>
+      '• Sviluppo di un dispositivo elettronico portatile\n• Creazione di un prodotto di consumo con connettività IoT\n• Apparecchiature mediche conformi agli standard di qualità\n• Sistemi di automazione per PMI';
+
+  @override
+  String get servicePcbExamples =>
+      '• Progettazione PCB per apparecchiature mediche\n• PCB per dispositivi di consumo\n• Schede per sistemi di controllo industriale\n• Ottimizzazione dei progetti per ridurre i costi di produzione';
+
+  @override
+  String get servicePrototypeExamples =>
+      '• Prototipo di un dispositivo IoT con sensori\n• Prototipo di un’applicazione integrata con hardware\n• Validazione precoce di un prodotto elettronico\n• Prototipi per presentazioni a investitori o fiere';
+
+  @override
+  String get serviceOptimizationExamples =>
+      '• Riduzione dei costi nella produzione elettronica\n• Ottimizzazione dei tempi di calibrazione e controllo\n• Standardizzazione dei processi software\n• Miglioramento della tracciabilità dei prodotti';
+
+  @override
+  String get serviceIotExamples =>
+      '• Sistema di monitoraggio remoto dei sensori\n• Controllo di dispositivi industriali tramite app\n• Soluzioni di domotica per case e uffici\n• Dispositivi connessi con archiviazione cloud';
 
   @override
   String get serviceIosExamples =>
@@ -211,4 +211,25 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get flipCardPopupClose => 'Chiudi';
+
+  @override
+  String get contactTitle => 'Contatto';
+
+  @override
+  String get contactName => 'Nome';
+
+  @override
+  String get contactEmail => 'Email';
+
+  @override
+  String get contactMessage => 'Messaggio';
+
+  @override
+  String get contactSend => 'Inviare';
+
+  @override
+  String get contactSentSuccess => 'Messaggio inviato con successo. Grazie!';
+
+  @override
+  String get contactSentError => 'Errore nell\'invio del messaggio. Riprova.';
 }

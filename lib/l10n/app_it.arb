@@ -23,6 +23,7 @@
   "aboutPresentation": "See presentation",
 
   "servicesSectionTitle": "Servizi",
+
   "serviceAndroidTitle": "Android",
   "serviceWebTitle": "Web",
   "serviceSqlTitle": "Basi di dati",
@@ -65,5 +66,13 @@
 
   "flipCardFalseKnowMore": "Scopri di più...",
   "flipCardTrueKnowMore": "Scopri ancora di più...",
-  "flipCardPopupClose": "Chiudi"
+  "flipCardPopupClose": "Chiudi",
+
+  "contactTitle": "Contatto",
+  "contactName": "Nome",
+  "contactEmail": "Email",
+  "contactMessage": "Messaggio",
+  "contactSend": "Inviare",
+  "contactSentSuccess": "Messaggio inviato con successo. Grazie!",
+  "contactSentError": "Errore nell'invio del messaggio. Riprova."
 }
