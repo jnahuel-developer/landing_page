@@ -37,6 +37,21 @@ class AppLocalizationsEn extends AppLocalizations {
       'Software • Hardware • Android • Web • Research • Process Optimization';
 
   @override
+  String get heroMain_Mobile1 => 'Ingeniero Electrónico';
+
+  @override
+  String get heroMain_Mobile2 => 'Desarrollador Freelance';
+
+  @override
+  String get heroExpanded_Mobile1 => 'Android • Web';
+
+  @override
+  String get heroExpanded_Mobile2 => 'Software • Hardware';
+
+  @override
+  String get heroExpanded_Mobile3 => 'Investigación • Optimización de procesos';
+
+  @override
   String get aboutTitle => 'About Me';
 
   @override

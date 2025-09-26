@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/l10n/generated/app_localizations.dart';
-import '../widgets/flip_card.dart';
+import '../../widgets/flip_card.dart';
 
 class ServicesSection extends StatelessWidget {
   const ServicesSection({super.key});

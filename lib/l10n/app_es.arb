@@ -12,6 +12,12 @@
   "heroMain": "Ingeniero Electrónico & Desarrollador Freelance",
   "heroExpanded": "Software • Hardware • Android • Web • Investigación • Optimización de procesos",
 
+  "heroMain_Mobile1": "Ingeniero Electrónico",
+  "heroMain_Mobile2": "Desarrollador Freelance",
+  "heroExpanded_Mobile1": "Android • Web",
+  "heroExpanded_Mobile2": "Software • Hardware",
+  "heroExpanded_Mobile3": "Investigación • Optimización de procesos",
+
   "aboutTitle": "Sobre mí",
   "aboutShowMore": "Conocer más",
   "aboutShortDescription": "Soy Ingeniero Electrónico con más de siete años de experiencia en el desarrollo de software y productos, habiendo trabajado en industrias altamente exigentes en el cumplimiento de normativas de calidad y diseño ISO. Hoy ofrezco servicios de desarrollo freelance, diseñando y creando soluciones digitales a tu medida: aplicaciones, sitios web y sistemas de gestión que integran servicios en la nube y APIs, para que tengas exactamente lo que tu proyecto necesita.",

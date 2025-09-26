@@ -154,6 +154,36 @@ abstract class AppLocalizations {
   /// **'Software • Hardware • Android • Web • Investigación • Optimización de procesos'**
   String get heroExpanded;
 
+  /// No description provided for @heroMain_Mobile1.
+  ///
+  /// In es, this message translates to:
+  /// **'Ingeniero Electrónico'**
+  String get heroMain_Mobile1;
+
+  /// No description provided for @heroMain_Mobile2.
+  ///
+  /// In es, this message translates to:
+  /// **'Desarrollador Freelance'**
+  String get heroMain_Mobile2;
+
+  /// No description provided for @heroExpanded_Mobile1.
+  ///
+  /// In es, this message translates to:
+  /// **'Android • Web'**
+  String get heroExpanded_Mobile1;
+
+  /// No description provided for @heroExpanded_Mobile2.
+  ///
+  /// In es, this message translates to:
+  /// **'Software • Hardware'**
+  String get heroExpanded_Mobile2;
+
+  /// No description provided for @heroExpanded_Mobile3.
+  ///
+  /// In es, this message translates to:
+  /// **'Investigación • Optimización de procesos'**
+  String get heroExpanded_Mobile3;
+
   /// No description provided for @aboutTitle.
   ///
   /// In es, this message translates to:

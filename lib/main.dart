@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/generated/app_localizations.dart';
-import 'sections/header.dart';
-import 'sections/hero.dart';
-import 'sections/about.dart';
-import 'sections/services.dart';
-import 'sections/contact.dart';
+
+// 📂 Desktop sections
+import 'sections/desktop/header.dart';
+import 'sections/desktop/hero.dart';
+import 'sections/desktop/about.dart';
+import 'sections/desktop/services.dart';
+import 'sections/desktop/contact.dart';
+
+// 📂 Mobile sections
+import 'sections/mobile/header_mobile.dart';
+import 'sections/mobile/hero_mobile.dart';
+import 'sections/mobile/about_mobile.dart';
+import 'sections/mobile/services_mobile.dart';
+import 'sections/mobile/contact_mobile.dart';
+
 import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
@@ -38,7 +48,7 @@ class _MyPortfolioAppState extends State<MyPortfolioApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nahuel martinez',
+      title: 'Nahuel Martinez',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: const Color(0xFF00AEEF),
@@ -80,8 +90,6 @@ class PortfolioHomePage extends StatefulWidget {
   State<PortfolioHomePage> createState() => _PortfolioHomePageState();
 }
 
-
-
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
   final ScrollController _scrollController = ScrollController();
   final FocusNode _focusNode = FocusNode();
@@ -105,7 +113,6 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   void _startScrolling(bool down) {
     _scrollTimer?.cancel();
     _scrollTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
-      // 16ms ≈ 60fps
       final newOffset = _scrollController.offset + (down ? 50 : -50);
       _scrollController.jumpTo(
         newOffset.clamp(
@@ -136,7 +143,6 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
     }
   }
 
-  // 🔧 función para scrollear a cada sección
   void scrollToSection(String section) {
     BuildContext? targetContext;
     switch (section) {
@@ -159,8 +165,12 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
     }
   }
 
+  bool isMobile(BuildContext context) => MediaQuery.of(context).size.width < 800;
+
   @override
   Widget build(BuildContext context) {
+    final mobile = isMobile(context);
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: RawKeyboardListener(
@@ -168,26 +178,39 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         onKey: _handleKeyEvent,
         child: Column(
           children: [
-            // 🔝 Header fijo arriba con navegación
-            HeaderSection(
-              onLocaleChange: widget.onLocaleChange,
-              onNavButtonPressed: scrollToSection,
-            ),
+            // 🔝 Header según dispositivo
+            mobile
+                ? HeaderSectionMobile(
+                    onLocaleChange: widget.onLocaleChange,
+                    onNavButtonPressed: scrollToSection,
+                  )
+                : HeaderSection(
+                    onLocaleChange: widget.onLocaleChange,
+                    onNavButtonPressed: scrollToSection,
+                  ),
 
-            // ⬇️ El resto scrollea
             Expanded(
               child: SingleChildScrollView(
                 controller: _scrollController,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    HeroSection(key: heroKey),
-                    AboutMeSection(
-                      key: aboutKey,
-                      onLocaleChange: widget.onLocaleChange,
-                    ),
-                    ServicesSection(key: servicesKey),
-                    ContactSection(key: contactKey),
+                    mobile ? HeroSectionMobile(key: heroKey) : HeroSection(key: heroKey),
+                    mobile
+                        ? AboutMeSection(
+                            key: aboutKey,
+                            onLocaleChange: widget.onLocaleChange,
+                          )
+                          /*AboutMeSectionMobile(
+                            key: aboutKey,
+                            onLocaleChange: widget.onLocaleChange,
+                          )*/
+                        : AboutMeSection(
+                            key: aboutKey,
+                            onLocaleChange: widget.onLocaleChange,
+                          ),
+                    mobile ? ServicesSection(key: servicesKey) /*ServicesSectionMobile(key: servicesKey)*/ : ServicesSection(key: servicesKey),
+                    mobile ? ContactSection(key: contactKey) /*ContactSectionMobile(key: contactKey)*/ : ContactSection(key: contactKey),
                   ],
                 ),
               ),
