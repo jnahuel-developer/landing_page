@@ -31,7 +31,6 @@ class HeaderSection extends StatelessWidget {
           ),
           Row(
             children: [
-              _navButton(loc.login, 'hero'),
               _navButton(loc.aboutTitle, 'about'),
               _navButton(loc.services, 'services'),
               _navButton(loc.contact, 'contact'),

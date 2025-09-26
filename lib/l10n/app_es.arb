@@ -24,8 +24,11 @@
 
   "servicesSectionTitle": "Servicios",
 
-  "serviceAndroidTitle": "Android",
-  "serviceWebTitle": "Web",
+  "serviceAndroidTitle": "Aplicaciones móviles",
+  "serviceWebTitle": "Desarrollo Web",
+  "serviceDesktopTitle": "Aplicaciones de escritorio",
+  "serviceChatbotTitle": "Chatbots / Asistencia virtual",
+  "serviceIATitle": "Aplicaciones de IA",
   "serviceSqlTitle": "Bases de datos",
   "serviceProductTitle": "Producto",
   "servicePcbTitle": "PCB",
@@ -36,6 +39,9 @@
 
   "serviceAndroidDescription": "Desarrollo de aplicaciones Android modernas y fáciles de usar, pensadas para ofrecer la mejor experiencia a tus clientes e integradas con servicios en la nube y APIs.",
   "serviceWebDescription": "Diseño y desarrollo de sitios y aplicaciones web escalables, adaptadas a cualquier dispositivo y enfocadas en el rendimiento y la experiencia del usuario.",
+  "serviceDesktopDescription": "Desarrollo de software a medida para entornos Windows, con interfaces gráficas intuitivas, comunicación con periféricos y gestión eficiente de bases de datos.",
+  "serviceChatbotDescription": "Automatiza la atención al cliente con chatbots inteligentes y asistentes virtuales capaces de brindar respuestas rápidas, personalizadas y disponibles las 24 horas.",
+  "serviceIADescription": "Implementación de soluciones basadas en inteligencia artificial: análisis de datos, reconocimiento de patrones y sistemas predictivos para potenciar tu negocio.",
   "serviceSqlDescription": "Creación y gestión de bases de datos SQL optimizadas, asegurando la estabilidad, seguridad y escalabilidad de tus aplicaciones y sistemas.",
   "serviceProductDescription": "Acompañamiento integral en el desarrollo de productos tecnológicos, desde la idea inicial hasta una solución lista para el mercado.",
   "servicePcbDescription": "Diseño de esquemáticos y placas electrónicas (PCB) con foco en la eficiencia y la reducción de costos productivos, cumpliendo altos estándares de calidad.",
@@ -44,8 +50,24 @@
   "serviceIotDescription": "Soluciones de Internet of Things que integran hardware y software, conectando dispositivos para generar datos y crear nuevas oportunidades de negocio.",
   "serviceIosDescription": "Desarrollo de aplicaciones para iOS con una experiencia fluida y confiable, integradas con servicios en la nube y adaptadas a las necesidades de tus usuarios.",
 
+  "serviceAndroidSubtitle": "Apps Android modernas y seguras, hechas a tu medida.",
+  "serviceWebSubtitle": "Aplicaciones web rápidas, atractivas y accesibles desde cualquier dispositivo.",
+  "serviceDesktopSubtitle": "Software de escritorio confiable para tu entorno Windows.",
+  "serviceChatbotSubtitle": "Chatbots inteligentes que atienden a tus clientes 24/7.",
+  "serviceIASubtitle": "Soluciones de IA que llevan tu negocio al siguiente nivel.",
+  "serviceSqlSubtitle": "Bases de datos confiables para que tu información esté siempre segura.",
+  "serviceProductSubtitle": "Convertí tus ideas en productos tecnológicos listos para el mercado.",
+  "servicePcbSubtitle": "Placas electrónicas diseñadas para calidad, funcionalidad y bajo costo.",
+  "servicePrototypeSubtitle": "Prototipos electrónicos para validar tu idea en tiempo récord.",
+  "serviceOptimizationSubtitle": "Procesos más ágiles, eficientes y sostenibles para tu negocio.",
+  "serviceIotSubtitle": "Dispositivos conectados que transforman datos en oportunidades.",
+  "serviceIosSubtitle": "Apps iOS fluidas, seguras y con la mejor experiencia de usuario.",
+
   "serviceAndroidLongDescription": "Desarrollo de aplicaciones Android personalizadas, diseñadas para adaptarse a las necesidades específicas de tu negocio o proyecto. Creo soluciones intuitivas y modernas que mejoran la experiencia del usuario, integrando servicios en la nube, notificaciones, sistemas de autenticación y sincronización de datos en tiempo real. Mis desarrollos buscan siempre ser escalables, seguros y fáciles de mantener, para que tu inversión rinda a largo plazo.",
   "serviceWebLongDescription": "Diseño y desarrollo de aplicaciones web modernas, accesibles desde cualquier dispositivo y pensadas para ofrecer la mejor experiencia al usuario. Construyo sitios y sistemas con interfaces atractivas y rápidas, que se adaptan a las necesidades de tu negocio, ya sea para brindar información, gestionar procesos internos o crear plataformas interactivas para tus clientes. Cada desarrollo está pensado para crecer en el tiempo, integrándose con bases de datos, servicios en la nube y APIs externas.",
+  "serviceDesktopLongDescription": "Desarrollo de aplicaciones de escritorio para entornos Windows, diseñadas para brindar soluciones confiables y eficientes en la gestión de procesos y datos. Mis aplicaciones cuentan con interfaces gráficas intuitivas, conexión con bases de datos y compatibilidad con periféricos, logrando un software que se adapta a las necesidades específicas de tu negocio. El objetivo es ofrecer herramientas robustas, fáciles de usar y sostenibles a largo plazo.",
+  "serviceChatbotLongDescription": "Implementación de chatbots y asistentes virtuales que permiten mejorar la atención al cliente, automatizar respuestas frecuentes y optimizar la comunicación con los usuarios. Mis soluciones de chatbot se integran en sitios web, aplicaciones y plataformas de mensajería, ofreciendo soporte 24/7 de manera clara y personalizada. Esto ayuda a reducir tiempos de espera, mejorar la experiencia de los clientes y potenciar la productividad de tu negocio.",
+  "serviceIALongDescription": "Desarrollo de soluciones basadas en Inteligencia Artificial que permiten automatizar procesos, analizar grandes volúmenes de datos y generar predicciones útiles para la toma de decisiones. Mis aplicaciones de IA se adaptan a distintos rubros, desde el reconocimiento de imágenes hasta la recomendación de contenidos, con foco en aportar valor real a tu negocio. La meta es ayudarte a innovar y mantenerte competitivo en un entorno digital en constante evolución.",
   "serviceSqlLongDescription": "Diseño y administración de bases de datos SQL robustas, que aseguran el manejo eficiente, seguro y confiable de la información crítica de tu negocio. Cada base de datos se estructura pensando en la escalabilidad y en la velocidad de acceso, garantizando la estabilidad de las aplicaciones que la utilizan. Además, implemento buenas prácticas de seguridad y respaldo, para que tus datos estén siempre protegidos.",
   "serviceProductLongDescription": "Acompaño el desarrollo completo de productos tecnológicos, desde la idea inicial hasta la puesta en marcha. Esto incluye la planificación, diseño y ejecución de cada etapa, buscando que el resultado final no solo cumpla con tus expectativas, sino que también se adapte a estándares de calidad y eficiencia productiva. Trabajo junto a vos para convertir una idea en un producto real, optimizando costos y reduciendo riesgos en el camino.",
   "servicePcbLongDescription": "Diseño de circuitos impresos (PCB) y esquemáticos electrónicos optimizados para garantizar la mejor relación entre calidad, funcionalidad y costos de producción. Cada diseño se realiza teniendo en cuenta normativas de calidad, compatibilidad de componentes y facilidad de montaje, reduciendo riesgos y mejorando la eficiencia en la fabricación. Mi objetivo es ayudarte a transformar tus ideas en placas electrónicas listas para la producción, confiables y sostenibles en el tiempo.",
@@ -56,6 +78,9 @@
 
   "serviceAndroidExamples": "• App para gestión de clientes\n• App para gestión de turnos\n• App para gestión de stock\n• App para almacenamiento de fotos, videos y archivos importantes",
   "serviceWebExamples": "• Plataforma de reservas online\n• Portal de clientes con login y área privada\n• Sistema de gestión de pedidos\n• Sitio institucional con panel de administración",
+  "serviceDesktopExamples": "• Sistema de gestión comercial\n• Aplicación de control de inventario\n• Software para conexión con impresoras y escáneres\n• Herramientas administrativas con reportes avanzados",
+  "serviceChatbotExamples": "• Chatbot para atención al cliente en sitios web\n• Asistente virtual en WhatsApp\n• Respuestas automáticas en redes sociales\n• Sistema de soporte para ecommerce",
+  "serviceIAExamples": "• Modelo de predicción de ventas\n• Sistema de recomendación de productos\n• Análisis automático de encuestas o comentarios\n• Reconocimiento de imágenes y patrones",
   "serviceSqlExamples": "• Base de datos para gestión de usuarios y clientes\n• Base de datos para inventarios y stock\n• Registro de transacciones financieras\n• Sistemas de reportes personalizados",
   "serviceProductExamples": "• Desarrollo de un dispositivo electrónico portátil\n• Creación de un producto de consumo con conectividad IoT\n• Equipos médicos bajo normativas de calidad\n• Sistemas de automatización para pymes",
   "servicePcbExamples": "• Diseño de PCB para equipos médicos\n• PCB para dispositivos de consumo masivo\n• Placas para sistemas de control industrial\n• Optimización de diseños para reducir costos de fabricación",
@@ -63,6 +88,8 @@
   "serviceOptimizationExamples": "• Reducción de costos en la producción de electrónica\n• Optimización de tiempos de calibración y control\n• Estandarización de procesos de software\n• Mejora en la trazabilidad de productos",
   "serviceIotExamples": "• Sistema de monitoreo remoto de sensores\n• Control de dispositivos industriales desde una app\n• Soluciones de domótica para hogares y oficinas\n• Dispositivos conectados con almacenamiento en la nube",
   "serviceIosExamples": "• App para reservas y turnos en iPhone\n• App de gestión empresarial para iPad\n• Aplicación de almacenamiento en la nube\n• Soluciones personalizadas para startups y pymes",
+
+  "titleExamples": "Ejemplos",
 
   "flipCardFalseKnowMore": "Conocer más...",
   "flipCardTrueKnowMore": "Conocer aún más...",

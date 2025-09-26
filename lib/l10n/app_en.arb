@@ -24,8 +24,11 @@
 
   "servicesSectionTitle": "Services",
 
-  "serviceAndroidTitle": "Android",
-  "serviceWebTitle": "Web",
+  "serviceAndroidTitle": "Mobile Applications",
+  "serviceWebTitle": "Web Development",
+  "serviceDesktopTitle": "Desktop Applications",
+  "serviceChatbotTitle": "Chatbots / Virtual Assistance",
+  "serviceIATitle": "AI Applications",
   "serviceSqlTitle": "Databases",
   "serviceProductTitle": "Product",
   "servicePcbTitle": "PCB",
@@ -36,6 +39,9 @@
 
   "serviceAndroidDescription": "Development of modern and user-friendly Android applications, designed to deliver the best experience to your customers and integrated with cloud services and APIs.",
   "serviceWebDescription": "Design and development of scalable web applications and websites, adapted to any device and focused on performance and user experience.",
+  "serviceDesktopDescription": "Custom software development for Windows environments, with intuitive graphical interfaces, peripheral communication, and efficient database management.",
+  "serviceChatbotDescription": "Automate customer service with intelligent chatbots and virtual assistants capable of providing quick, personalized, and 24/7 responses.",
+  "serviceIADescription": "Implementation of artificial intelligence solutions: data analysis, pattern recognition, and predictive systems to boost your business.",
   "serviceSqlDescription": "Creation and management of optimized SQL databases, ensuring stability, security, and scalability for your applications and systems.",
   "serviceProductDescription": "Comprehensive support in the development of technology products, from the initial idea to a market-ready solution.",
   "servicePcbDescription": "Design of schematics and printed circuit boards (PCBs) with a focus on efficiency and cost reduction, meeting high quality standards.",
@@ -44,8 +50,24 @@
   "serviceIotDescription": "Internet of Things solutions that integrate hardware and software, connecting devices to generate data and create new business opportunities.",
   "serviceIosDescription": "Development of iOS applications with a smooth and reliable experience, integrated with cloud services and tailored to your users’ needs.",
 
+  "serviceAndroidSubtitle": "Modern and secure Android apps, tailored to you.",
+  "serviceWebSubtitle": "Fast, attractive, and accessible web applications from any device.",
+  "serviceDesktopSubtitle": "Reliable desktop software for your Windows environment.",
+  "serviceChatbotSubtitle": "Smart chatbots that serve your customers 24/7.",
+  "serviceIASubtitle": "AI solutions that take your business to the next level.",
+  "serviceSqlSubtitle": "Reliable databases to keep your information always safe.",
+  "serviceProductSubtitle": "Turn your ideas into tech products ready for the market.",
+  "servicePcbSubtitle": "Electronic boards designed for quality, functionality, and low cost.",
+  "servicePrototypeSubtitle": "Electronic prototypes to validate your idea in record time.",
+  "serviceOptimizationSubtitle": "More agile, efficient, and sustainable processes for your business.",
+  "serviceIotSubtitle": "Connected devices that turn data into opportunities.",
+  "serviceIosSubtitle": "Smooth, secure iOS apps with the best user experience.",
+
   "serviceAndroidLongDescription": "Custom Android application development tailored to the specific needs of your business or project. I create intuitive and modern solutions that enhance user experience, integrating cloud services, notifications, authentication systems, and real-time data synchronization. My developments are always designed to be scalable, secure, and easy to maintain, ensuring your investment pays off in the long term.",
   "serviceWebLongDescription": "Design and development of modern web applications, accessible from any device and focused on delivering the best user experience. I build websites and systems with attractive and fast interfaces, adapted to your business needs, whether to provide information, manage internal processes, or create interactive platforms for your customers. Each project is designed to grow over time, integrating with databases, cloud services, and external APIs.",
+  "serviceDesktopLongDescription": "Development of desktop applications for Windows environments, designed to provide reliable and efficient solutions for process and data management. My applications feature intuitive graphical interfaces, database connections, and peripheral compatibility, achieving software that adapts to your business’s specific needs. The goal is to deliver robust, easy-to-use, and sustainable tools in the long term.",
+  "serviceChatbotLongDescription": "Implementation of chatbots and virtual assistants to improve customer service, automate frequent responses, and optimize user communication. My chatbot solutions integrate into websites, applications, and messaging platforms, offering 24/7 support in a clear and personalized way. This helps reduce waiting times, improve customer experience, and increase business productivity.",
+  "serviceIALongDescription": "Development of Artificial Intelligence solutions that automate processes, analyze large volumes of data, and generate useful predictions for decision-making. My AI applications adapt to different industries, from image recognition to content recommendation, focusing on delivering real value to your business. The goal is to help you innovate and stay competitive in a constantly evolving digital environment.",
   "serviceSqlLongDescription": "Design and management of robust SQL databases that ensure efficient, secure, and reliable handling of your business’s critical information. Each database is structured for scalability and fast access, guaranteeing the stability of the applications that rely on it. In addition, I implement security and backup best practices so that your data is always protected.",
   "serviceProductLongDescription": "I provide end-to-end support in the development of technological products, from the initial idea to market launch. This includes planning, design, and execution of each stage, ensuring the final result not only meets your expectations but also complies with quality and efficiency standards. I work closely with you to transform an idea into a real product, optimizing costs and reducing risks along the way.",
   "servicePcbLongDescription": "Design of printed circuit boards (PCBs) and electronic schematics optimized to ensure the best balance between quality, functionality, and production costs. Each design takes into account quality standards, component compatibility, and ease of assembly, reducing risks and improving manufacturing efficiency. My goal is to help you turn your ideas into reliable and production-ready electronic boards.",
@@ -56,6 +78,9 @@
 
   "serviceAndroidExamples": "• Client management app\n• Appointment scheduling app\n• Inventory management app\n• App for storing photos, videos, and important files",
   "serviceWebExamples": "• Online booking platform\n• Customer portal with login and private area\n• Order management system\n• Corporate website with admin panel",
+  "serviceDesktopExamples": "• Business management system\n• Inventory control application\n• Software for printer and scanner connection\n• Administrative tools with advanced reporting",
+  "serviceChatbotExamples": "• Customer service chatbot for websites\n• Virtual assistant on WhatsApp\n• Automated responses on social media\n• Support system for e-commerce",
+  "serviceIAExamples": "• Sales prediction model\n• Product recommendation system\n• Automatic survey or comment analysis\n• Image and pattern recognition",
   "serviceSqlExamples": "• Database for user and client management\n• Database for inventory and stock\n• Financial transaction records\n• Custom reporting systems",
   "serviceProductExamples": "• Development of a portable electronic device\n• Creation of a consumer product with IoT connectivity\n• Medical equipment under quality standards\n• Automation systems for small and medium businesses",
   "servicePcbExamples": "• PCB design for medical equipment\n• PCBs for consumer electronics\n• Boards for industrial control systems\n• Design optimization to reduce manufacturing costs",
@@ -63,6 +88,8 @@
   "serviceOptimizationExamples": "• Cost reduction in electronics manufacturing\n• Optimization of calibration and control times\n• Standardization of software processes\n• Improvement in product traceability",
   "serviceIotExamples": "• Remote sensor monitoring system\n• Industrial device control via app\n• Smart home and office automation solutions\n• Connected devices with cloud storage",
   "serviceIosExamples": "• Appointment and booking app for iPhone\n• Business management app for iPad\n• Cloud storage application\n• Custom solutions for startups and SMEs",
+
+  "titleExamples": "Examples",
 
   "flipCardFalseKnowMore": "Learn more...",
   "flipCardTrueKnowMore": "Discover even more...",

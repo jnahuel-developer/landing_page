@@ -76,6 +76,9 @@ flutter:
     - assets/icons/github.png
     - assets/servicios/tarjeta-servicio-android.jpg
     - assets/servicios/tarjeta-servicio-web.png
+    - assets/servicios/tarjeta-servicio-desktop.png
+    - assets/servicios/tarjeta-servicio-chatbot.jpg
+    - assets/servicios/tarjeta-servicio-ai.jpg
     - assets/servicios/tarjeta-servicio-sql.jpg
     - assets/servicios/tarjeta-servicio-hardware.jpg
     - assets/servicios/tarjeta-servicio-optimizacion-procesos.png

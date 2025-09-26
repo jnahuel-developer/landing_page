@@ -69,10 +69,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get servicesSectionTitle => 'Services';
 
   @override
-  String get serviceAndroidTitle => 'Android';
+  String get serviceAndroidTitle => 'Mobile Applications';
 
   @override
-  String get serviceWebTitle => 'Web';
+  String get serviceWebTitle => 'Web Development';
+
+  @override
+  String get serviceDesktopTitle => 'Desktop Applications';
+
+  @override
+  String get serviceChatbotTitle => 'Chatbots / Virtual Assistance';
+
+  @override
+  String get serviceIATitle => 'AI Applications';
 
   @override
   String get serviceSqlTitle => 'Databases';
@@ -104,6 +113,18 @@ class AppLocalizationsEn extends AppLocalizations {
       'Design and development of scalable web applications and websites, adapted to any device and focused on performance and user experience.';
 
   @override
+  String get serviceDesktopDescription =>
+      'Custom software development for Windows environments, with intuitive graphical interfaces, peripheral communication, and efficient database management.';
+
+  @override
+  String get serviceChatbotDescription =>
+      'Automate customer service with intelligent chatbots and virtual assistants capable of providing quick, personalized, and 24/7 responses.';
+
+  @override
+  String get serviceIADescription =>
+      'Implementation of artificial intelligence solutions: data analysis, pattern recognition, and predictive systems to boost your business.';
+
+  @override
   String get serviceSqlDescription =>
       'Creation and management of optimized SQL databases, ensuring stability, security, and scalability for your applications and systems.';
 
@@ -132,12 +153,72 @@ class AppLocalizationsEn extends AppLocalizations {
       'Development of iOS applications with a smooth and reliable experience, integrated with cloud services and tailored to your users’ needs.';
 
   @override
+  String get serviceAndroidSubtitle =>
+      'Modern and secure Android apps, tailored to you.';
+
+  @override
+  String get serviceWebSubtitle =>
+      'Fast, attractive, and accessible web applications from any device.';
+
+  @override
+  String get serviceDesktopSubtitle =>
+      'Reliable desktop software for your Windows environment.';
+
+  @override
+  String get serviceChatbotSubtitle =>
+      'Smart chatbots that serve your customers 24/7.';
+
+  @override
+  String get serviceIASubtitle =>
+      'AI solutions that take your business to the next level.';
+
+  @override
+  String get serviceSqlSubtitle =>
+      'Reliable databases to keep your information always safe.';
+
+  @override
+  String get serviceProductSubtitle =>
+      'Turn your ideas into tech products ready for the market.';
+
+  @override
+  String get servicePcbSubtitle =>
+      'Electronic boards designed for quality, functionality, and low cost.';
+
+  @override
+  String get servicePrototypeSubtitle =>
+      'Electronic prototypes to validate your idea in record time.';
+
+  @override
+  String get serviceOptimizationSubtitle =>
+      'More agile, efficient, and sustainable processes for your business.';
+
+  @override
+  String get serviceIotSubtitle =>
+      'Connected devices that turn data into opportunities.';
+
+  @override
+  String get serviceIosSubtitle =>
+      'Smooth, secure iOS apps with the best user experience.';
+
+  @override
   String get serviceAndroidLongDescription =>
       'Custom Android application development tailored to the specific needs of your business or project. I create intuitive and modern solutions that enhance user experience, integrating cloud services, notifications, authentication systems, and real-time data synchronization. My developments are always designed to be scalable, secure, and easy to maintain, ensuring your investment pays off in the long term.';
 
   @override
   String get serviceWebLongDescription =>
       'Design and development of modern web applications, accessible from any device and focused on delivering the best user experience. I build websites and systems with attractive and fast interfaces, adapted to your business needs, whether to provide information, manage internal processes, or create interactive platforms for your customers. Each project is designed to grow over time, integrating with databases, cloud services, and external APIs.';
+
+  @override
+  String get serviceDesktopLongDescription =>
+      'Development of desktop applications for Windows environments, designed to provide reliable and efficient solutions for process and data management. My applications feature intuitive graphical interfaces, database connections, and peripheral compatibility, achieving software that adapts to your business’s specific needs. The goal is to deliver robust, easy-to-use, and sustainable tools in the long term.';
+
+  @override
+  String get serviceChatbotLongDescription =>
+      'Implementation of chatbots and virtual assistants to improve customer service, automate frequent responses, and optimize user communication. My chatbot solutions integrate into websites, applications, and messaging platforms, offering 24/7 support in a clear and personalized way. This helps reduce waiting times, improve customer experience, and increase business productivity.';
+
+  @override
+  String get serviceIALongDescription =>
+      'Development of Artificial Intelligence solutions that automate processes, analyze large volumes of data, and generate useful predictions for decision-making. My AI applications adapt to different industries, from image recognition to content recommendation, focusing on delivering real value to your business. The goal is to help you innovate and stay competitive in a constantly evolving digital environment.';
 
   @override
   String get serviceSqlLongDescription =>
@@ -176,6 +257,18 @@ class AppLocalizationsEn extends AppLocalizations {
       '• Online booking platform\n• Customer portal with login and private area\n• Order management system\n• Corporate website with admin panel';
 
   @override
+  String get serviceDesktopExamples =>
+      '• Business management system\n• Inventory control application\n• Software for printer and scanner connection\n• Administrative tools with advanced reporting';
+
+  @override
+  String get serviceChatbotExamples =>
+      '• Customer service chatbot for websites\n• Virtual assistant on WhatsApp\n• Automated responses on social media\n• Support system for e-commerce';
+
+  @override
+  String get serviceIAExamples =>
+      '• Sales prediction model\n• Product recommendation system\n• Automatic survey or comment analysis\n• Image and pattern recognition';
+
+  @override
   String get serviceSqlExamples =>
       '• Database for user and client management\n• Database for inventory and stock\n• Financial transaction records\n• Custom reporting systems';
 
@@ -202,6 +295,9 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get serviceIosExamples =>
       '• Appointment and booking app for iPhone\n• Business management app for iPad\n• Cloud storage application\n• Custom solutions for startups and SMEs';
+
+  @override
+  String get titleExamples => 'Examples';
 
   @override
   String get flipCardFalseKnowMore => 'Learn more...';

@@ -176,6 +176,8 @@ class _AboutMeSectionState extends State<AboutMeSection> {
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 60),
+
             // Foto con halo radial
             Container(
               width: size,
@@ -203,16 +205,16 @@ class _AboutMeSectionState extends State<AboutMeSection> {
               ),
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 60),
 
             // Botón con mismo ancho de la foto
-            SizedBox(
-              width: size,
-              child: _BreathingButton(
-                label: loc.aboutPresentation,
-                onPressed: () => _showPresentationDialog(context),
-              ),
-            ),
+//            SizedBox(
+//              width: size,
+//              child: _BreathingButton(
+//                label: loc.aboutPresentation,
+//                onPressed: () => _showPresentationDialog(context),
+//              ),
+//            ),
           ],
         );
       },

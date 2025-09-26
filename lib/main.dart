@@ -140,9 +140,6 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   void scrollToSection(String section) {
     BuildContext? targetContext;
     switch (section) {
-      case 'hero':
-        targetContext = heroKey.currentContext;
-        break;
       case 'about':
         targetContext = aboutKey.currentContext;
         break;

@@ -4,6 +4,7 @@ import 'package:landing_page/l10n/generated/app_localizations.dart';
 
 class FlipCard extends StatefulWidget {
   final String title;
+  final String subtitle;
   final String description;
   final String longDescription;
   final String examples;
@@ -12,6 +13,7 @@ class FlipCard extends StatefulWidget {
   const FlipCard({
     super.key,
     required this.title,
+    required this.subtitle,
     required this.description,
     required this.longDescription,
     required this.examples,
@@ -26,7 +28,6 @@ class _FlipCardState extends State<FlipCard>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   bool _isFront = true;
-
   bool _isHoveringBackButton = false;
 
   @override
@@ -48,12 +49,11 @@ class _FlipCardState extends State<FlipCard>
     }
   }
 
-  /// --- Abrir pop-up en cara trasera ---
+  /// --- Pop-up con rediseño ---
   void _showDetailPopup(BuildContext context) {
     final loc = AppLocalizations.of(context)!;
 
-    // Dividir los ejemplos en lista (se almacenan en el .arb con "\n")
-    final examples = widget.examples?.split("\n") ?? [];
+    final examples = widget.examples.split("\n");
 
     showDialog(
       context: context,
@@ -62,46 +62,61 @@ class _FlipCardState extends State<FlipCard>
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
+          elevation: 10,
           child: Container(
-            padding: const EdgeInsets.all(20),
-            width: 500,
+            padding: const EdgeInsets.all(24),
+            constraints: const BoxConstraints(maxWidth: 600),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // --- Título ---
-                Center(
-                  child: Text(
-                    widget.title,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
+                Text(
+                  widget.title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 8),
+
+                // --- Subtítulo ---
+                Text(
+                  widget.subtitle,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black54,
+                  ),
+                ),
+                const SizedBox(height: 16),
 
                 // --- Descripción larga ---
                 Text(
-                  widget.longDescription ?? "",
-                  style: const TextStyle(fontSize: 16),
-                  textAlign: TextAlign.justify,
+                  widget.longDescription,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.black87,
+                    height: 1.4,
+                  ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 24),
 
                 // --- Ejemplos ---
                 if (examples.isNotEmpty) ...[
-                  const Text(
-                    "Ejemplos:",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "${loc.titleExamples}:",
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 10),
-
-                  // Lista tipo tabla con colores alternados
+                  const SizedBox(height: 12),
                   Column(
                     children: List.generate(examples.length, (index) {
                       final example = examples[index].replaceAll("• ", "");
@@ -122,17 +137,26 @@ class _FlipCardState extends State<FlipCard>
                     }),
                   ),
                 ],
-
-                const SizedBox(height: 20),
+                const SizedBox(height: 24),
 
                 // --- Botón cerrar ---
-                Align(
-                  alignment: Alignment.center,
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.pop(ctx),
-                    child: Text(loc.flipCardPopupClose),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF00AEEF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                      vertical: 12,
+                    ),
                   ),
-                )
+                  onPressed: () => Navigator.pop(ctx),
+                  child: Text(
+                    loc.flipCardPopupClose,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
               ],
             ),
           ),
@@ -140,7 +164,6 @@ class _FlipCardState extends State<FlipCard>
       },
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +195,7 @@ class _FlipCardState extends State<FlipCard>
     );
   }
 
-  /// --- CARA FRONTAL ---
+  /// --- Cara frontal ---
   Widget _buildFront(AppLocalizations loc) {
     return _cardBase(
       Stack(
@@ -246,7 +269,7 @@ class _FlipCardState extends State<FlipCard>
     );
   }
 
-  /// --- CARA TRASERA ---
+  /// --- Cara trasera ---
   Widget _buildBack(AppLocalizations loc) {
     return _cardBase(
       Stack(
@@ -293,7 +316,7 @@ class _FlipCardState extends State<FlipCard>
     );
   }
 
-  /// --- BASE DE TARJETA ---
+  /// --- Base de tarjeta ---
   Widget _cardBase(
     Widget child, {
     required Color color,

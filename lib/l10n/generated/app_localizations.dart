@@ -217,14 +217,32 @@ abstract class AppLocalizations {
   /// No description provided for @serviceAndroidTitle.
   ///
   /// In es, this message translates to:
-  /// **'Android'**
+  /// **'Aplicaciones móviles'**
   String get serviceAndroidTitle;
 
   /// No description provided for @serviceWebTitle.
   ///
   /// In es, this message translates to:
-  /// **'Web'**
+  /// **'Desarrollo Web'**
   String get serviceWebTitle;
+
+  /// No description provided for @serviceDesktopTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aplicaciones de escritorio'**
+  String get serviceDesktopTitle;
+
+  /// No description provided for @serviceChatbotTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Chatbots / Asistencia virtual'**
+  String get serviceChatbotTitle;
+
+  /// No description provided for @serviceIATitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aplicaciones de IA'**
+  String get serviceIATitle;
 
   /// No description provided for @serviceSqlTitle.
   ///
@@ -280,6 +298,24 @@ abstract class AppLocalizations {
   /// **'Diseño y desarrollo de sitios y aplicaciones web escalables, adaptadas a cualquier dispositivo y enfocadas en el rendimiento y la experiencia del usuario.'**
   String get serviceWebDescription;
 
+  /// No description provided for @serviceDesktopDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Desarrollo de software a medida para entornos Windows, con interfaces gráficas intuitivas, comunicación con periféricos y gestión eficiente de bases de datos.'**
+  String get serviceDesktopDescription;
+
+  /// No description provided for @serviceChatbotDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Automatiza la atención al cliente con chatbots inteligentes y asistentes virtuales capaces de brindar respuestas rápidas, personalizadas y disponibles las 24 horas.'**
+  String get serviceChatbotDescription;
+
+  /// No description provided for @serviceIADescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Implementación de soluciones basadas en inteligencia artificial: análisis de datos, reconocimiento de patrones y sistemas predictivos para potenciar tu negocio.'**
+  String get serviceIADescription;
+
   /// No description provided for @serviceSqlDescription.
   ///
   /// In es, this message translates to:
@@ -322,6 +358,78 @@ abstract class AppLocalizations {
   /// **'Desarrollo de aplicaciones para iOS con una experiencia fluida y confiable, integradas con servicios en la nube y adaptadas a las necesidades de tus usuarios.'**
   String get serviceIosDescription;
 
+  /// No description provided for @serviceAndroidSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Apps Android modernas y seguras, hechas a tu medida.'**
+  String get serviceAndroidSubtitle;
+
+  /// No description provided for @serviceWebSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Aplicaciones web rápidas, atractivas y accesibles desde cualquier dispositivo.'**
+  String get serviceWebSubtitle;
+
+  /// No description provided for @serviceDesktopSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Software de escritorio confiable para tu entorno Windows.'**
+  String get serviceDesktopSubtitle;
+
+  /// No description provided for @serviceChatbotSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Chatbots inteligentes que atienden a tus clientes 24/7.'**
+  String get serviceChatbotSubtitle;
+
+  /// No description provided for @serviceIASubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Soluciones de IA que llevan tu negocio al siguiente nivel.'**
+  String get serviceIASubtitle;
+
+  /// No description provided for @serviceSqlSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Bases de datos confiables para que tu información esté siempre segura.'**
+  String get serviceSqlSubtitle;
+
+  /// No description provided for @serviceProductSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Convertí tus ideas en productos tecnológicos listos para el mercado.'**
+  String get serviceProductSubtitle;
+
+  /// No description provided for @servicePcbSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Placas electrónicas diseñadas para calidad, funcionalidad y bajo costo.'**
+  String get servicePcbSubtitle;
+
+  /// No description provided for @servicePrototypeSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Prototipos electrónicos para validar tu idea en tiempo récord.'**
+  String get servicePrototypeSubtitle;
+
+  /// No description provided for @serviceOptimizationSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Procesos más ágiles, eficientes y sostenibles para tu negocio.'**
+  String get serviceOptimizationSubtitle;
+
+  /// No description provided for @serviceIotSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Dispositivos conectados que transforman datos en oportunidades.'**
+  String get serviceIotSubtitle;
+
+  /// No description provided for @serviceIosSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Apps iOS fluidas, seguras y con la mejor experiencia de usuario.'**
+  String get serviceIosSubtitle;
+
   /// No description provided for @serviceAndroidLongDescription.
   ///
   /// In es, this message translates to:
@@ -333,6 +441,24 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Diseño y desarrollo de aplicaciones web modernas, accesibles desde cualquier dispositivo y pensadas para ofrecer la mejor experiencia al usuario. Construyo sitios y sistemas con interfaces atractivas y rápidas, que se adaptan a las necesidades de tu negocio, ya sea para brindar información, gestionar procesos internos o crear plataformas interactivas para tus clientes. Cada desarrollo está pensado para crecer en el tiempo, integrándose con bases de datos, servicios en la nube y APIs externas.'**
   String get serviceWebLongDescription;
+
+  /// No description provided for @serviceDesktopLongDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Desarrollo de aplicaciones de escritorio para entornos Windows, diseñadas para brindar soluciones confiables y eficientes en la gestión de procesos y datos. Mis aplicaciones cuentan con interfaces gráficas intuitivas, conexión con bases de datos y compatibilidad con periféricos, logrando un software que se adapta a las necesidades específicas de tu negocio. El objetivo es ofrecer herramientas robustas, fáciles de usar y sostenibles a largo plazo.'**
+  String get serviceDesktopLongDescription;
+
+  /// No description provided for @serviceChatbotLongDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Implementación de chatbots y asistentes virtuales que permiten mejorar la atención al cliente, automatizar respuestas frecuentes y optimizar la comunicación con los usuarios. Mis soluciones de chatbot se integran en sitios web, aplicaciones y plataformas de mensajería, ofreciendo soporte 24/7 de manera clara y personalizada. Esto ayuda a reducir tiempos de espera, mejorar la experiencia de los clientes y potenciar la productividad de tu negocio.'**
+  String get serviceChatbotLongDescription;
+
+  /// No description provided for @serviceIALongDescription.
+  ///
+  /// In es, this message translates to:
+  /// **'Desarrollo de soluciones basadas en Inteligencia Artificial que permiten automatizar procesos, analizar grandes volúmenes de datos y generar predicciones útiles para la toma de decisiones. Mis aplicaciones de IA se adaptan a distintos rubros, desde el reconocimiento de imágenes hasta la recomendación de contenidos, con foco en aportar valor real a tu negocio. La meta es ayudarte a innovar y mantenerte competitivo en un entorno digital en constante evolución.'**
+  String get serviceIALongDescription;
 
   /// No description provided for @serviceSqlLongDescription.
   ///
@@ -388,6 +514,24 @@ abstract class AppLocalizations {
   /// **'• Plataforma de reservas online\n• Portal de clientes con login y área privada\n• Sistema de gestión de pedidos\n• Sitio institucional con panel de administración'**
   String get serviceWebExamples;
 
+  /// No description provided for @serviceDesktopExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Sistema de gestión comercial\n• Aplicación de control de inventario\n• Software para conexión con impresoras y escáneres\n• Herramientas administrativas con reportes avanzados'**
+  String get serviceDesktopExamples;
+
+  /// No description provided for @serviceChatbotExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Chatbot para atención al cliente en sitios web\n• Asistente virtual en WhatsApp\n• Respuestas automáticas en redes sociales\n• Sistema de soporte para ecommerce'**
+  String get serviceChatbotExamples;
+
+  /// No description provided for @serviceIAExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'• Modelo de predicción de ventas\n• Sistema de recomendación de productos\n• Análisis automático de encuestas o comentarios\n• Reconocimiento de imágenes y patrones'**
+  String get serviceIAExamples;
+
   /// No description provided for @serviceSqlExamples.
   ///
   /// In es, this message translates to:
@@ -429,6 +573,12 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'• App para reservas y turnos en iPhone\n• App de gestión empresarial para iPad\n• Aplicación de almacenamiento en la nube\n• Soluciones personalizadas para startups y pymes'**
   String get serviceIosExamples;
+
+  /// No description provided for @titleExamples.
+  ///
+  /// In es, this message translates to:
+  /// **'Ejemplos'**
+  String get titleExamples;
 
   /// No description provided for @flipCardFalseKnowMore.
   ///

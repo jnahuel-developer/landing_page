@@ -69,10 +69,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get servicesSectionTitle => 'Servicios';
 
   @override
-  String get serviceAndroidTitle => 'Android';
+  String get serviceAndroidTitle => 'Aplicaciones móviles';
 
   @override
-  String get serviceWebTitle => 'Web';
+  String get serviceWebTitle => 'Desarrollo Web';
+
+  @override
+  String get serviceDesktopTitle => 'Aplicaciones de escritorio';
+
+  @override
+  String get serviceChatbotTitle => 'Chatbots / Asistencia virtual';
+
+  @override
+  String get serviceIATitle => 'Aplicaciones de IA';
 
   @override
   String get serviceSqlTitle => 'Bases de datos';
@@ -104,6 +113,18 @@ class AppLocalizationsEs extends AppLocalizations {
       'Diseño y desarrollo de sitios y aplicaciones web escalables, adaptadas a cualquier dispositivo y enfocadas en el rendimiento y la experiencia del usuario.';
 
   @override
+  String get serviceDesktopDescription =>
+      'Desarrollo de software a medida para entornos Windows, con interfaces gráficas intuitivas, comunicación con periféricos y gestión eficiente de bases de datos.';
+
+  @override
+  String get serviceChatbotDescription =>
+      'Automatiza la atención al cliente con chatbots inteligentes y asistentes virtuales capaces de brindar respuestas rápidas, personalizadas y disponibles las 24 horas.';
+
+  @override
+  String get serviceIADescription =>
+      'Implementación de soluciones basadas en inteligencia artificial: análisis de datos, reconocimiento de patrones y sistemas predictivos para potenciar tu negocio.';
+
+  @override
   String get serviceSqlDescription =>
       'Creación y gestión de bases de datos SQL optimizadas, asegurando la estabilidad, seguridad y escalabilidad de tus aplicaciones y sistemas.';
 
@@ -132,12 +153,72 @@ class AppLocalizationsEs extends AppLocalizations {
       'Desarrollo de aplicaciones para iOS con una experiencia fluida y confiable, integradas con servicios en la nube y adaptadas a las necesidades de tus usuarios.';
 
   @override
+  String get serviceAndroidSubtitle =>
+      'Apps Android modernas y seguras, hechas a tu medida.';
+
+  @override
+  String get serviceWebSubtitle =>
+      'Aplicaciones web rápidas, atractivas y accesibles desde cualquier dispositivo.';
+
+  @override
+  String get serviceDesktopSubtitle =>
+      'Software de escritorio confiable para tu entorno Windows.';
+
+  @override
+  String get serviceChatbotSubtitle =>
+      'Chatbots inteligentes que atienden a tus clientes 24/7.';
+
+  @override
+  String get serviceIASubtitle =>
+      'Soluciones de IA que llevan tu negocio al siguiente nivel.';
+
+  @override
+  String get serviceSqlSubtitle =>
+      'Bases de datos confiables para que tu información esté siempre segura.';
+
+  @override
+  String get serviceProductSubtitle =>
+      'Convertí tus ideas en productos tecnológicos listos para el mercado.';
+
+  @override
+  String get servicePcbSubtitle =>
+      'Placas electrónicas diseñadas para calidad, funcionalidad y bajo costo.';
+
+  @override
+  String get servicePrototypeSubtitle =>
+      'Prototipos electrónicos para validar tu idea en tiempo récord.';
+
+  @override
+  String get serviceOptimizationSubtitle =>
+      'Procesos más ágiles, eficientes y sostenibles para tu negocio.';
+
+  @override
+  String get serviceIotSubtitle =>
+      'Dispositivos conectados que transforman datos en oportunidades.';
+
+  @override
+  String get serviceIosSubtitle =>
+      'Apps iOS fluidas, seguras y con la mejor experiencia de usuario.';
+
+  @override
   String get serviceAndroidLongDescription =>
       'Desarrollo de aplicaciones Android personalizadas, diseñadas para adaptarse a las necesidades específicas de tu negocio o proyecto. Creo soluciones intuitivas y modernas que mejoran la experiencia del usuario, integrando servicios en la nube, notificaciones, sistemas de autenticación y sincronización de datos en tiempo real. Mis desarrollos buscan siempre ser escalables, seguros y fáciles de mantener, para que tu inversión rinda a largo plazo.';
 
   @override
   String get serviceWebLongDescription =>
       'Diseño y desarrollo de aplicaciones web modernas, accesibles desde cualquier dispositivo y pensadas para ofrecer la mejor experiencia al usuario. Construyo sitios y sistemas con interfaces atractivas y rápidas, que se adaptan a las necesidades de tu negocio, ya sea para brindar información, gestionar procesos internos o crear plataformas interactivas para tus clientes. Cada desarrollo está pensado para crecer en el tiempo, integrándose con bases de datos, servicios en la nube y APIs externas.';
+
+  @override
+  String get serviceDesktopLongDescription =>
+      'Desarrollo de aplicaciones de escritorio para entornos Windows, diseñadas para brindar soluciones confiables y eficientes en la gestión de procesos y datos. Mis aplicaciones cuentan con interfaces gráficas intuitivas, conexión con bases de datos y compatibilidad con periféricos, logrando un software que se adapta a las necesidades específicas de tu negocio. El objetivo es ofrecer herramientas robustas, fáciles de usar y sostenibles a largo plazo.';
+
+  @override
+  String get serviceChatbotLongDescription =>
+      'Implementación de chatbots y asistentes virtuales que permiten mejorar la atención al cliente, automatizar respuestas frecuentes y optimizar la comunicación con los usuarios. Mis soluciones de chatbot se integran en sitios web, aplicaciones y plataformas de mensajería, ofreciendo soporte 24/7 de manera clara y personalizada. Esto ayuda a reducir tiempos de espera, mejorar la experiencia de los clientes y potenciar la productividad de tu negocio.';
+
+  @override
+  String get serviceIALongDescription =>
+      'Desarrollo de soluciones basadas en Inteligencia Artificial que permiten automatizar procesos, analizar grandes volúmenes de datos y generar predicciones útiles para la toma de decisiones. Mis aplicaciones de IA se adaptan a distintos rubros, desde el reconocimiento de imágenes hasta la recomendación de contenidos, con foco en aportar valor real a tu negocio. La meta es ayudarte a innovar y mantenerte competitivo en un entorno digital en constante evolución.';
 
   @override
   String get serviceSqlLongDescription =>
@@ -176,6 +257,18 @@ class AppLocalizationsEs extends AppLocalizations {
       '• Plataforma de reservas online\n• Portal de clientes con login y área privada\n• Sistema de gestión de pedidos\n• Sitio institucional con panel de administración';
 
   @override
+  String get serviceDesktopExamples =>
+      '• Sistema de gestión comercial\n• Aplicación de control de inventario\n• Software para conexión con impresoras y escáneres\n• Herramientas administrativas con reportes avanzados';
+
+  @override
+  String get serviceChatbotExamples =>
+      '• Chatbot para atención al cliente en sitios web\n• Asistente virtual en WhatsApp\n• Respuestas automáticas en redes sociales\n• Sistema de soporte para ecommerce';
+
+  @override
+  String get serviceIAExamples =>
+      '• Modelo de predicción de ventas\n• Sistema de recomendación de productos\n• Análisis automático de encuestas o comentarios\n• Reconocimiento de imágenes y patrones';
+
+  @override
   String get serviceSqlExamples =>
       '• Base de datos para gestión de usuarios y clientes\n• Base de datos para inventarios y stock\n• Registro de transacciones financieras\n• Sistemas de reportes personalizados';
 
@@ -202,6 +295,9 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get serviceIosExamples =>
       '• App para reservas y turnos en iPhone\n• App de gestión empresarial para iPad\n• Aplicación de almacenamiento en la nube\n• Soluciones personalizadas para startups y pymes';
+
+  @override
+  String get titleExamples => 'Ejemplos';
 
   @override
   String get flipCardFalseKnowMore => 'Conocer más...';

@@ -15,6 +15,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceAndroidTitle,
         "description": loc.serviceAndroidDescription,
+        "serviceSubtitle": loc.serviceAndroidSubtitle,
         "longDescription": loc.serviceAndroidLongDescription,
         "examples": loc.serviceAndroidExamples,
         "image": "assets/servicios/tarjeta-servicio-android.jpg",
@@ -22,13 +23,39 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceWebTitle,
         "description": loc.serviceWebDescription,
+        "serviceSubtitle": loc.serviceWebSubtitle,
         "longDescription": loc.serviceWebLongDescription,
         "examples": loc.serviceWebExamples,
         "image": "assets/servicios/tarjeta-servicio-web.png",
       },
       {
+        "title": loc.serviceDesktopTitle,
+        "description": loc.serviceDesktopDescription,
+        "serviceSubtitle": loc.serviceDesktopSubtitle,
+        "longDescription": loc.serviceDesktopLongDescription,
+        "examples": loc.serviceDesktopExamples,
+        "image": "assets/servicios/tarjeta-servicio-desktop.png",
+      },
+      {
+        "title": loc.serviceChatbotTitle,
+        "description": loc.serviceChatbotDescription,
+        "serviceSubtitle": loc.serviceChatbotSubtitle,
+        "longDescription": loc.serviceChatbotLongDescription,
+        "examples": loc.serviceChatbotExamples,
+        "image": "assets/servicios/tarjeta-servicio-chatbot.jpg",
+      },
+      {
+        "title": loc.serviceIATitle,
+        "description": loc.serviceIADescription,
+        "serviceSubtitle": loc.serviceIASubtitle,
+        "longDescription": loc.serviceIALongDescription,
+        "examples": loc.serviceIAExamples,
+        "image": "assets/servicios/tarjeta-servicio-ai.jpg",
+      },
+      {
         "title": loc.serviceSqlTitle,
         "description": loc.serviceSqlDescription,
+        "serviceSubtitle": loc.serviceSqlSubtitle,
         "longDescription": loc.serviceSqlLongDescription,
         "examples": loc.serviceSqlExamples,
         "image": "assets/servicios/tarjeta-servicio-sql.jpg",
@@ -36,6 +63,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceProductTitle,
         "description": loc.serviceProductDescription,
+        "serviceSubtitle": loc.serviceProductSubtitle,
         "longDescription": loc.serviceProductLongDescription,
         "examples": loc.serviceProductExamples,
         "image": "assets/servicios/tarjeta-servicio-esquematicos.png",
@@ -43,6 +71,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.servicePcbTitle,
         "description": loc.servicePcbDescription,
+        "serviceSubtitle": loc.servicePcbSubtitle,
         "longDescription": loc.servicePcbLongDescription,
         "examples": loc.servicePcbExamples,
         "image": "assets/servicios/tarjeta-servicio-hardware.jpg",
@@ -50,6 +79,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.servicePrototypeTitle,
         "description": loc.servicePrototypeDescription,
+        "serviceSubtitle": loc.servicePrototypeSubtitle,
         "longDescription": loc.servicePrototypeLongDescription,
         "examples": loc.servicePrototypeExamples,
         "image": "assets/servicios/tarjeta-servicio-arduino.png",
@@ -57,6 +87,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceOptimizationTitle,
         "description": loc.serviceOptimizationDescription,
+        "serviceSubtitle": loc.serviceOptimizationSubtitle,
         "longDescription": loc.serviceOptimizationLongDescription,
         "examples": loc.serviceOptimizationExamples,
         "image": "assets/servicios/tarjeta-servicio-optimizacion-procesos.png",
@@ -64,6 +95,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceIotTitle,
         "description": loc.serviceIotDescription,
+        "serviceSubtitle": loc.serviceIotSubtitle,
         "longDescription": loc.serviceIotLongDescription,
         "examples": loc.serviceIotExamples,
         "image": "assets/servicios/tarjeta-servicio-iot.png",
@@ -71,6 +103,7 @@ class ServicesSection extends StatelessWidget {
       {
         "title": loc.serviceIosTitle,
         "description": loc.serviceIosDescription,
+        "serviceSubtitle": loc.serviceIosSubtitle,
         "longDescription": loc.serviceIosLongDescription,
         "examples": loc.serviceIosExamples,
         "image": "assets/servicios/tarjeta-servicio-ios.jpg",
@@ -107,6 +140,7 @@ class ServicesSection extends StatelessWidget {
                       title: service["title"]!,
                       description: service["description"]!,
                       longDescription: service["longDescription"]!,
+                      subtitle: service["serviceSubtitle"]!,
                       examples: service["examples"]!,
                       backgroundImage: service["image"]!,
                     ),

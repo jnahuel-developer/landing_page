@@ -4,8 +4,19 @@ import 'package:http/http.dart' as http;
 import 'package:landing_page/l10n/generated/app_localizations.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ContactSection extends StatelessWidget {
+class ContactSection extends StatefulWidget {
   const ContactSection({super.key});
+
+  @override
+  State<ContactSection> createState() => _ContactSectionState();
+}
+
+class _ContactSectionState extends State<ContactSection> {
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final messageController = TextEditingController();
+
+  bool _isLoading = false;
 
   Future<void> _sendEmail(String name, String email, String message, String createdAt, String status) async {
     const serviceId = "service_ei86fvw";
@@ -38,13 +49,51 @@ class ContactSection extends StatelessWidget {
     }
   }
 
+  Future<void> _handleSubmit(BuildContext context) async {
+    final loc = AppLocalizations.of(context)!;
+    final name = nameController.text.trim();
+    final email = emailController.text.trim();
+    final message = messageController.text.trim();
+
+    if (name.isEmpty || email.isEmpty || message.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(loc.contactSentError)),
+      );
+      return;
+    }
+
+    setState(() => _isLoading = true);
+
+    try {
+      await FirebaseFirestore.instance.collection('contacts').add({
+        'name': name,
+        'email': email,
+        'message': message,
+        'createdAt': FieldValue.serverTimestamp(),
+        'status': 'new',
+      });
+
+      await _sendEmail(name, email, message, DateTime.now().toIso8601String(), "new");
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(loc.contactSentSuccess)),
+      );
+
+      nameController.clear();
+      emailController.clear();
+      messageController.clear();
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(loc.contactSentError)),
+      );
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context)!;
-
-    final nameController = TextEditingController();
-    final emailController = TextEditingController();
-    final messageController = TextEditingController();
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 40),
@@ -62,47 +111,21 @@ class ContactSection extends StatelessWidget {
           const SizedBox(height: 15),
           _textField(loc.contactMessage, messageController, maxLines: 5),
           const SizedBox(height: 20),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF00AEEF),
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-            ),
-            onPressed: () async {
-              final name = nameController.text.trim();
-              final email = emailController.text.trim();
-              final message = messageController.text.trim();
 
-              try {
-                // Guardar en Firestore
-                final doc = await FirebaseFirestore.instance.collection('contacts').add({
-                  'name': name,
-                  'email': email,
-                  'message': message,
-                  'createdAt': FieldValue.serverTimestamp(),
-                  'status': 'new',
-                });
-
-                // Enviar correo con EmailJS
-                await _sendEmail(name, email, message, DateTime.now().toIso8601String(), "new");
-
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(loc.contactSentSuccess)),
-                );
-
-                nameController.clear();
-                emailController.clear();
-                messageController.clear();
-              } catch (e, stack) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(loc.contactSentError)),
-                );
-              }
-            },
-            child: Text(
-              loc.contactSend,
-              style: const TextStyle(color: Colors.white),
-            ),
-          ),
+          // --- Botón o loader ---
+          _isLoading
+              ? const CircularProgressIndicator(color: Color(0xFF00AEEF))
+              : ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF00AEEF),
+                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  ),
+                  onPressed: () => _handleSubmit(context),
+                  child: Text(
+                    loc.contactSend,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
         ],
       ),
     );
