@@ -197,14 +197,10 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                   children: [
                     mobile ? HeroSectionMobile(key: heroKey) : HeroSection(key: heroKey),
                     mobile
-                        ? AboutMeSection(
+                        ? AboutMeSectionMobile(
                             key: aboutKey,
                             onLocaleChange: widget.onLocaleChange,
                           )
-                          /*AboutMeSectionMobile(
-                            key: aboutKey,
-                            onLocaleChange: widget.onLocaleChange,
-                          )*/
                         : AboutMeSection(
                             key: aboutKey,
                             onLocaleChange: widget.onLocaleChange,
