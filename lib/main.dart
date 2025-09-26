@@ -205,7 +205,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                             key: aboutKey,
                             onLocaleChange: widget.onLocaleChange,
                           ),
-                    mobile ? ServicesSection(key: servicesKey) /*ServicesSectionMobile(key: servicesKey)*/ : ServicesSection(key: servicesKey),
+                    mobile ? ServicesSectionMobile(key: servicesKey) : ServicesSection(key: servicesKey),
                     mobile ? ContactSection(key: contactKey) /*ContactSectionMobile(key: contactKey)*/ : ContactSection(key: contactKey),
                   ],
                 ),
