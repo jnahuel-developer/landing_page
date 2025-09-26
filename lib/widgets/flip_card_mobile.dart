@@ -95,7 +95,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
                     widget.title,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -104,7 +104,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
                     widget.subtitle,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontStyle: FontStyle.italic,
                       color: Colors.black54,
                     ),
@@ -114,7 +114,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
                     widget.longDescription,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 15,
+                      fontSize: 12,
                       height: 1.4,
                     ),
                   ),
@@ -125,7 +125,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
                       child: Text(
                         "${loc.titleExamples}:",
                         style: const TextStyle(
-                          fontSize: 16,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -146,7 +146,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
                       }),
                     ),
                   ],
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF00AEEF),
@@ -284,7 +284,7 @@ class _FlipCardMobileState extends State<FlipCardMobile>
             child: Text(
               widget.description,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 16),
             ),
           ),
           Positioned(

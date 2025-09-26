@@ -22,7 +22,7 @@ class HeaderSectionMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // 🔹 Espacio vacío para balancear con el menú de la derecha
-          const SizedBox(width: 24),
+          const SizedBox(width: 20),
 
           // 🔹 Título centrado
           Expanded(
@@ -30,7 +30,7 @@ class HeaderSectionMobile extends StatelessWidget {
               child: Text(
                 loc.headerTitle,
                 style: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF00AEEF),
                 ),
