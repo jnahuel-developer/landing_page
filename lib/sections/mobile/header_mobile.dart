@@ -16,7 +16,7 @@ class HeaderSectionMobile extends StatelessWidget {
     final loc = AppLocalizations.of(context)!;
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,7 +30,7 @@ class HeaderSectionMobile extends StatelessWidget {
               child: Text(
                 loc.headerTitle,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 10,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF00AEEF),
                 ),
@@ -64,7 +64,7 @@ class HeaderSectionMobile extends StatelessWidget {
     }
 
     return PopupMenuButton<Locale>(
-      icon: Image.asset(flag, width: 24, height: 24),
+      icon: Image.asset(flag, width: 20, height: 20),
       onSelected: onLocaleChange,
       itemBuilder: (context) => [
         PopupMenuItem(
